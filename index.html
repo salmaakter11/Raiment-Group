@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en-US">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="UTF-8">
+	<title>SFDENIM </title>
+	<link rel="stylesheet" href="asstes/css/style.css">
+	<link rel="stylesheet" href="asstes/css/tailwind.css">
+	<link rel="stylesheet" href="asstes/css/fontawesome.css">
+	<link rel="stylesheet" href="asstes/css/fullPage.css">
+	<link rel="stylesheet" href="asstes/css/elementor-icons.css">
+	<script type='text/javascript' src='asstes/js/jquery.minaf6c.js' id='jquery-core-js'></script>
+	<script  type='text/javascript' src='asstes/js/jQuery-Migrat- v3.3.2.js'
+		id='jquery-migrate-js'></script>
+	<link rel="icon" href="asstes/img/logo.png" sizes="192x192" />
+</head>
+
+<body
+	class="home page-template page-template-page-templates page-template-tpl-home page-template-page-templatestpl-home-php page page-id-701 font-body jet-desktop-menu-active elementor-default elementor-kit-5 elementor-page elementor-page-701"
+	x-data="{ atTop: true, openMenu: false }" :class="{ 'overflow-hidden': openMenu }"
+	x-on:scroll.window="atTop = (window.pageYOffset > 200) ? false : true; ">
+	<div class="site-header">
+		<div>
+			<div class='fixed header-inner flex py-20 px-15 lg:px-45 left-0 top-0 items-center w-full justify-between z-50'
+				:class="{'fixed': atTop }">
+				<div class='logo max-w-127'>
+					<a class="hoverable js-hover-setup" href="index.html">
+						<img class='w-full h-auto object-contain' src="asstes/img/logo.png" />
+					</a>
+				</div>
+				<div class='flex text-10 font-bold tracking-13 uppercase text-black items-center'>
+					<div @click='openMenu=true;if(typeof fullpage_api !== "undefined"){fullpage_api.setAllowScrolling(false)}'
+						class='menu-icon cursor-pointer hoverable js-hover-setup'>
+						<svg width="32" height="14" viewBox="0 0 32 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="32" height="4" rx="2" fill="black" />
+							<rect x="9" y="10" width="23" height="4" rx="2" fill="black" />
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div :class="{'visible opacity-100 scale-100': openMenu, 'opacity-0 invisible scale-95': !openMenu}"
+				class='invisible opacity-0 menu bg-black transform transition-all duration-200 fixed left-0 top-0 w-full h-full z-50'>
+				<div class='sm:grid overflow-auto sm:grid-cols-11 flex flex-col h-full'>
+					<div class='sm:col-span-5 sm:order-1 order-2 sm:py-37 py-20 sm:px-45 px-10'>
+						<div class='flex h-full sm:pt-0 pt-32 sm:px-0 px-15 sm:pb-0 pb-15 flex-col justify-between'>
+							<div class='logo sm:block hidden max-w-127'>
+								<a class="hoverable js-hover-setup" href="index.html"><img
+										class='w-full h-auto object-contain' src="asstes/img/logo.png" /></a>
+							</div>
+							<div>
+								<div class='social mb-20'>
+									<a target="_blank" class='hoverable js-hover-setup inline-block mr-10' href="#">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M10 1.83333C12.6667 1.83333 13 1.83333 14.0833 1.91667C16.8333 2 18.0833 3.33333 18.1667 6C18.25 7.08333 18.25 7.33333 18.25 10C18.25 12.6667 18.25 13 18.1667 14C18.0833 16.6667 16.75 18 14.0833 18.0833C13 18.1667 12.75 18.1667 10 18.1667C7.33333 18.1667 7 18.1667 6 18.0833C3.25 18 2 16.6667 1.91667 14C1.83333 12.9167 1.83333 12.6667 1.83333 10C1.83333 7.33333 1.83333 7 1.91667 6C2 3.33333 3.33333 2 6 1.91667C7 1.83333 7.33333 1.83333 10 1.83333ZM10 0C7.25 0 6.91667 0 5.91667 0.0833333C2.25 0.25 0.25 2.25 0.0833333 5.91667C0 6.91667 0 7.25 0 10C0 12.75 0 13.0833 0.0833333 14.0833C0.25 17.75 2.25 19.75 5.91667 19.9167C6.91667 20 7.25 20 10 20C12.75 20 13.0833 20 14.0833 19.9167C17.75 19.75 19.75 17.75 19.9167 14.0833C20 13.0833 20 12.75 20 10C20 7.25 20 6.91667 19.9167 5.91667C19.75 2.25 17.75 0.25 14.0833 0.0833333C13.0833 0 12.75 0 10 0ZM10 4.83333C7.16667 4.83333 4.83333 7.16667 4.83333 10C4.83333 12.8333 7.16667 15.1667 10 15.1667C12.8333 15.1667 15.1667 12.8333 15.1667 10C15.1667 7.16667 12.8333 4.83333 10 4.83333ZM10 13.3333C8.16667 13.3333 6.66667 11.8333 6.66667 10C6.66667 8.16667 8.16667 6.66667 10 6.66667C11.8333 6.66667 13.3333 8.16667 13.3333 10C13.3333 11.8333 11.8333 13.3333 10 13.3333ZM15.3333 3.5C14.6667 3.5 14.1667 4 14.1667 4.66667C14.1667 5.33333 14.6667 5.83333 15.3333 5.83333C16 5.83333 16.5 5.33333 16.5 4.66667C16.5 4 16 3.5 15.3333 3.5Z"
+												fill="white" />
+										</svg>
+									</a>
+									<a target="_blank" class='hoverable js-hover-setup inline-block mx-10' href="https://www.facebook.com/sfdenim/">
+										<svg width="11" height="20" viewBox="0 0 11 20" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M3.31836 6.66667H0.818359V10H3.31836V20H7.48503V10H10.485L10.8184 6.66667H7.48503V5.25C7.48503 4.5 7.65169 4.16667 8.40169 4.16667H10.8184V0H7.65169C4.65169 0 3.31836 1.33333 3.31836 3.83333V6.66667Z"
+												fill="white" />
+										</svg>
+									</a>
+									<a target="_blank" class='hoverable js-hover-setup inline-block mx-10' href="#">
+										<svg width="26" height="19" viewBox="0 0 26 19" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M20.7029 3.06767C21.2048 3.07855 21.6979 3.20037 22.1459 3.42418C22.3967 3.57373 22.5858 3.80608 22.6798 4.08015C22.9358 4.74253 23.0866 5.43999 23.1272 6.14788C23.2282 7.16036 23.2715 8.38674 23.2715 9.94111C23.2715 11.4955 23.2715 12.7932 23.1272 13.7629C23.084 14.4797 22.9333 15.1861 22.6798 15.8591C22.5898 16.1275 22.4055 16.3551 22.1603 16.5008C21.7134 16.7242 21.2181 16.8368 20.7173 16.8288C17.1243 17.0285 9.04344 17.0285 5.4215 16.8288C4.92005 16.8147 4.42769 16.693 3.9785 16.4723C3.72778 16.3228 3.53867 16.0904 3.44459 15.8163C3.18899 15.1489 3.03814 14.4468 2.99726 13.7343C2.89625 12.7361 2.85296 11.4955 2.85296 9.94111C2.85296 8.38674 2.85296 7.08906 2.99726 6.14788C3.03779 5.43999 3.18868 4.74253 3.44459 4.08015C3.53867 3.80608 3.72778 3.57373 3.9785 3.42418C4.42619 3.19945 4.91947 3.07758 5.4215 3.06767C10.5107 2.76591 15.6137 2.76591 20.7029 3.06767ZM0.818359 9.94111C0.818359 16.2156 1.3234 18.4973 5.32052 18.8395C9.00018 19.0534 17.182 19.0534 20.8617 18.8395C24.8588 18.6399 25.3638 16.2156 25.3638 9.94111C25.3638 3.6666 24.8588 1.38495 20.8617 1.04271C15.6857 0.743252 10.4965 0.743252 5.32052 1.04271C1.3234 1.35643 0.818359 3.68086 0.818359 9.94111ZM11.4966 13.2638C11.3415 13.3324 11.1715 13.3618 11.002 13.3493C10.8326 13.3368 10.6689 13.2829 10.5257 13.1924C10.3826 13.1019 10.2645 12.9776 10.1821 12.8307C10.0996 12.6838 10.0555 12.519 10.0536 12.3511V7.54539C10.0555 7.37746 10.0996 7.21264 10.1821 7.06578C10.2645 6.91891 10.3826 6.79462 10.5257 6.70409C10.6689 6.61356 10.8326 6.55964 11.002 6.54719C11.1715 6.53473 11.3415 6.56413 11.4966 6.63273L16.3739 9.04271C16.5441 9.12681 16.6872 9.25607 16.7872 9.416C16.8872 9.57594 16.9401 9.76023 16.9401 9.94824C16.9401 10.1362 16.8872 10.3205 16.7872 10.4805C16.6872 10.6404 16.5441 10.7697 16.3739 10.8538L11.4966 13.2638Z"
+												fill="white" />
+										</svg>
+									</a>
+								</div>
+								<h6
+									class='text-12 font-bold tracking-13 uppercase text-white mb-17 hover:text-blue-5 transition-all duration-200'>
+									<a class="hoverable js-hover-setup" href="contact.html">Contact us</a>
+								</h6>
+								<div class='flex flex-wrap items-center mb-17 hidden'>
+									<h6
+										class='mr-15 mb-0 text-12 font-bold tracking-13 uppercase text-white hover:text-blue-5 transition-all duration-200'>
+										<a class="hoverable js-hover-setup" href="terms-and-conditions.html.html">Terms
+											And Conditions</a>
+									</h6>
+									<div class='w-px h-10 mb-2 bg-white inline-block mr-15'></div>
+									<h6
+										class='mb-0 flex-shrink-0 text-12 font-bold tracking-13 uppercase text-white  hover:text-blue-5 transition-all duration-200'>
+										<a class="hoverable js-hover-setup" href="privacy-policy.html.html">Privacy
+											Policy</a>
+									</h6>
+								</div>
+								<p class='font-medium text-10 text-white'>&copy; 2024, sfdenim. All Rights Reserved.</p>
+							</div>
+						</div>
+					</div>
+					<div class='logo absolute left-20 top-24 sm:hidden max-w-127'>
+						<a class="hoverable js-hover-setup" href="index.html">
+							<img class='w-full h-auto object-contain' src="asstes/img/logo.png" />
+						</a>
+					</div>
+					<div
+						class='vt-main-menu sm:col-span-6 sm:flex-none flex-auto sm:order-2 order-1 flex items-center sm:justify-start justify-center lg:pl-188 sm:py-37 pt-107 pb-20 sm:px-45 px-10 bg-white'>
+						<ul id="menu-main-menu" class="sm:pl-80 md:pl-0 pl-10">
+							<li id="menu-item-2197"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2197 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+								<a href="commitments.html"
+									class="inline-block py-20 hoverable js-hover-setup">Commitments</a>
+							</li>
+							<li id="menu-item-2196"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2196 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+								<a href="circularity.html"
+									class="inline-block py-20 hoverable js-hover-setup">Circularity</a>
+							</li>
+							<li id="menu-item-2200"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2200 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+								<a href="speed-to-market.html"
+									class="inline-block py-20 hoverable js-hover-setup">Speed To Market™</a>
+							</li>
+							<li id="menu-item-2198"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+								<a href="mill.html" class="inline-block py-20 hoverable js-hover-setup">Mill</a>
+							</li>
+							<li id="menu-item-2199"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2199 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+								<a href="sf.html"
+									class="inline-block py-20 hoverable js-hover-setup">SF USA</a>
+							</li>
+							<li id="menu-item-2201"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2201 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+								<a href="upcycling.html"
+									class="inline-block py-20 hoverable js-hover-setup">Upcycling</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div @click='openMenu=false;if(typeof fullpage_api !== "undefined"){fullpage_api.setAllowScrolling(true)}'
+					class='hoverable js-hover-setup z-1 close-menu absolute sm:right-37 right-15 top-15 sm:top-28 p-10 cursor-pointer'>
+					<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="3.45605" width="32" height="4" rx="2" transform="rotate(45 3.45605 0)" fill="black" />
+						<rect x="25.4561" y="3" width="32" height="4" rx="2" transform="rotate(135 25.4561 3)"
+							fill="black" />
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='lg:block md:hidden block fixed scroll-navigation-bar z-10 top-1/2 transform -translate-y-1/2'>
+		<ul class='scroll-navigation md:block hidden relative'>
+			<li data-key="1" class='cursor-pointer mb-8 hoverable active'>
+				<span class='w-14 text-8 mr-36 font-bold tracking-13 uppercase '>
+					01 </span>
+				<span class='text-8 font-bold uppercase tracking-13 '>
+					COMMITMENTS </span>
+			</li>
+			<li data-key="2" class='cursor-pointer mb-8 hoverable '>
+				<span class='w-14 text-8 mr-36 font-bold tracking-13 uppercase '>
+					02 </span>
+				<span class='text-8 font-bold uppercase tracking-13 '>
+					Circularity </span>
+			</li>
+			<li data-key="3" class='cursor-pointer mb-8 hoverable '>
+				<span class='w-14 text-8 mr-36 font-bold tracking-13 uppercase '>
+					03 </span>
+				<span class='text-8 font-bold uppercase tracking-13 '>
+					Speed To Market™ </span>
+			</li>
+			<li data-key="4" class='cursor-pointer mb-8 hoverable '>
+				<span class='w-14 text-8 mr-36 font-bold tracking-13 uppercase '>
+					04 </span>
+				<span class='text-8 font-bold uppercase tracking-13 '>
+					MILL </span>
+			</li>
+			<li data-key="5" class='cursor-pointer mb-8 hoverable '>
+				<span class='w-14 text-8 mr-36 font-bold tracking-13 uppercase '>
+					05 </span>
+				<span class='text-8 font-bold uppercase tracking-13 '>
+					SF USA </span>
+			</li>
+			<li data-key="6" class='cursor-pointer mb-8 hoverable '>
+				<span class='w-14 text-8 mr-36 font-bold tracking-13 uppercase '>
+					06 </span>
+				<span class='text-8 font-bold uppercase tracking-13 '>
+					UPCYCLING </span>
+			</li>
+			<div class='line mt-3 absolute top-1/2 -translate-y-1/2 transform bg-grey-2 left-30'></div>
+		</ul>
+	</div><span
+		class='flex flex-col justify-center items-center fixed left-1/2 transform -translate-x-1/2 sm:bottom-30 bottom-10 z-10 mb-0 sm:scale-100 scale-75'>
+		<div class="icon sm:mb-20 mb-5 slideUpAnimation transition-all duration-200">
+			<svg width="25" height="33" viewBox="0 0 25 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M12.4997 0C5.6074 0 0 5.29418 0 11.8014V21.1993C0 27.7058 5.6074 33 12.4997 33C19.3919 33 24.9993 27.7219 24.9993 21.2354V11.8014C24.9993 5.29418 19.3919 0 12.4997 0ZM22.6487 21.2354C22.6487 26.5173 18.096 30.8144 12.4997 30.8144C6.90334 30.8144 2.35058 26.5012 2.35058 21.1986V11.8014C2.35058 6.49881 6.90404 2.18561 12.4997 2.18561C18.0953 2.18561 22.6487 6.49881 22.6487 11.8014V21.2354Z"
+					fill="black" />
+				<path
+					d="M12.4996 9.0332C12.1881 9.03405 11.8897 9.14943 11.6695 9.35412C11.4493 9.55882 11.3252 9.8362 11.3243 10.1257V13.9503C11.3118 14.1009 11.333 14.2521 11.3864 14.3947C11.4398 14.5373 11.5243 14.668 11.6347 14.7788C11.7451 14.8896 11.8788 14.9779 12.0277 15.0384C12.1765 15.0988 12.3371 15.13 12.4996 15.13C12.662 15.13 12.8226 15.0988 12.9714 15.0384C13.1203 14.9779 13.2541 14.8896 13.3644 14.7788C13.4748 14.668 13.5593 14.5373 13.6127 14.3947C13.6661 14.2521 13.6873 14.1009 13.6748 13.9503V10.1257C13.6739 9.8362 13.5498 9.55882 13.3296 9.35412C13.1094 9.14943 12.811 9.03405 12.4996 9.0332Z"
+					fill="black" />
+			</svg>
+		</div>
+		<span class='inline-block max-w-127 text-12 uppercase hoverable text-black underline tracking-13 font-bold'>
+			SCROLL DOWN </span>
+	</span>
+	<div class=''>
+		<div id='fullpage2' class=' fullpage-style font-body lg:pt-10 relative fullpage2-width mx-auto'>
+			<div id='section2' class='section pt-0 font-body relative'>
+				<div class='mx-auto box-section'>
+					<div class='fullpage2-video-width overflow-hidden cover-box relative mx-auto'>
+						<div class=""><video class="w-full h-auto" autoplay muted loop>
+								<source src="asstes/img/video_02.mp4" type="video/mp4" />
+							</video></div>
+					</div>
+					<div class='px-30 home-slide-content'>
+						<div class='flex items-center text-black'>
+							<h4 class='font-bold lg:text-50 md:text-48 sm:text-40 text-30 mb-0'>
+								01</h4>
+							<span class='h-45 mx-10 w-px bg-black inline-block'></span>
+							<h5 class='text-16 mb-0 font-bold uppercase tracking-13 '>
+								COMMITMENTS</h5>
+						</div>
+						<h3
+							class='lg:text-64 lg:leading-tight md:leading-tight sm:leading-tight leading-none md:text-6xl text-45 font-extrabold tracking-wider text-black max-w-md mb-30'>
+							A FORCE <br>FOR CHANGE</h3>
+						<div class='lg:text-left text-center'>
+							<a class='sm:py-16 hoverable sm:px-40 py-10 px-20  tracking-13 font-extrabold text-13 border-2 rounded-80 bg-white border-black text-black left-1/2 hover:text-white hover:bg-black'
+								href="commitments.html">
+								LEARN MORE
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id='section3' class='section pt-0 font-body relative'>
+				<div class='mx-auto box-section'>
+					<div class='fullpage2-video-width overflow-hidden cover-box relative mx-auto'>
+						<div class=""><video class="w-full h-auto" autoplay muted loop>
+								<source src="asstes/img/video_03.mp4" type="video/mp4" />
+							</video></div>
+					</div>
+					<div class='px-30 home-slide-content'>
+						<div class='flex items-center text-black'>
+							<h4 class='font-bold lg:text-50 md:text-48 sm:text-40 text-30 mb-0'>
+								02</h4>
+							<span class='h-45 mx-10 w-px bg-black inline-block'></span>
+							<h5 class='text-16 mb-0 font-bold uppercase tracking-13 '>
+								Circularity</h5>
+						</div>
+						<h3
+							class='lg:text-64 lg:leading-tight md:leading-tight sm:leading-tight leading-none md:text-6xl text-45 font-extrabold tracking-wider text-black max-w-md mb-30'>
+							CLOSING <br>THE LOOP</h3>
+						<div class='lg:text-left text-center'>
+							<a class='sm:py-16 hoverable sm:px-40 py-10 px-20  tracking-13 font-extrabold text-13 border-2 rounded-80 bg-white border-black text-black left-1/2 hover:text-white hover:bg-black'
+								href="circularity.html">
+								LEARN MORE
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id='section4' class='section pt-0 font-body relative'>
+				<div class='mx-auto box-section'>
+					<div class='fullpage2-video-width overflow-hidden cover-box relative mx-auto'>
+						<div class=""><video class="w-full h-auto" autoplay muted loop>
+								<source src="asstes/img/video_02.mp4" type="video/mp4" />
+							</video></div>
+					</div>
+					<div class='px-30 home-slide-content'>
+						<div class='flex items-center text-black'>
+							<h4 class='font-bold lg:text-50 md:text-48 sm:text-40 text-30 mb-0'>
+								03</h4>
+							<span class='h-45 mx-10 w-px bg-black inline-block'></span>
+							<h5 class='text-16 mb-0 font-bold uppercase tracking-13 '>
+								Speed To Market™</h5>
+						</div>
+						<h3
+							class='lg:text-64 lg:leading-tight md:leading-tight sm:leading-tight leading-none md:text-6xl text-45 font-extrabold tracking-wider text-black max-w-md mb-30'>
+							CONNECTING <br>THE DOTS</h3>
+						<div class='lg:text-left text-center'>
+							<a class='sm:py-16 hoverable sm:px-40 py-10 px-20  tracking-13 font-extrabold text-13 border-2 rounded-80 bg-white border-black text-black left-1/2 hover:text-white hover:bg-black'
+								href="speed-to-market.html">
+								LEARN MORE
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id='section5' class='section pt-0 font-body relative'>
+				<div class='mx-auto box-section'>
+					<div class='fullpage2-video-width overflow-hidden cover-box relative mx-auto'>
+						<div class=""><video class="w-full h-auto" autoplay muted loop>
+								<source src="asstes/img/video_03.mp4" type="video/mp4" />
+							</video></div>
+					</div>
+					<div class='px-30 home-slide-content'>
+						<div class='flex items-center text-black'>
+							<h4 class='font-bold lg:text-50 md:text-48 sm:text-40 text-30 mb-0'>
+								04</h4>
+							<span class='h-45 mx-10 w-px bg-black inline-block'></span>
+							<h5 class='text-16 mb-0 font-bold uppercase tracking-13 '>
+								MILL</h5>
+						</div>
+						<h3
+							class='lg:text-64 lg:leading-tight md:leading-tight sm:leading-tight leading-none md:text-6xl text-45 font-extrabold tracking-wider text-black max-w-md mb-30'>
+							INTEGRATED FABRIC MILL</h3>
+						<div class='lg:text-left text-center'>
+							<a class='sm:py-16 hoverable sm:px-40 py-10 px-20  tracking-13 font-extrabold text-13 border-2 rounded-80 bg-white border-black text-black left-1/2 hover:text-white hover:bg-black'
+								href="mill.html">
+								LEARN MORE
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id='section6' class='section pt-0 font-body relative'>
+				<div class='mx-auto box-section'>
+					<div class='fullpage2-video-width overflow-hidden cover-box relative mx-auto'>
+						<div class=""><video class="w-full h-auto" autoplay muted loop>
+								<source src="asstes/img/video_02.mp4" type="video/mp4" />
+							</video></div>
+					</div>
+					<div class='px-30 home-slide-content'>
+						<div class='flex items-center text-black'>
+							<h4 class='font-bold lg:text-50 md:text-48 sm:text-40 text-30 mb-0'>
+								05</h4>
+							<span class='h-45 mx-10 w-px bg-black inline-block'></span>
+							<h5 class='text-16 mb-0 font-bold uppercase tracking-13 '>
+								SF DENIM USA</h5>
+						</div>
+						<h3
+							class='lg:text-64 lg:leading-tight md:leading-tight sm:leading-tight leading-none md:text-6xl text-45 font-extrabold tracking-wider text-black max-w-md mb-30'>
+							MADE IN <br> USA</h3>
+						<div class='lg:text-left text-center'>
+							<a class='sm:py-16 hoverable sm:px-40 py-10 px-20  tracking-13 font-extrabold text-13 border-2 rounded-80 bg-white border-black text-black left-1/2 hover:text-white hover:bg-black'
+								href="sf.html">
+								LEARN MORE
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id='section7' class='section pt-0 font-body relative'>
+				<div class='mx-auto box-section'>
+					<div class='fullpage2-video-width overflow-hidden cover-box relative mx-auto'>
+						<div class=""><video class="w-full h-auto" autoplay muted loop>
+								<source src="asstes/img/video_03.mp4" type="video/mp4" />
+							</video></div>
+					</div>
+					<div class='px-30 home-slide-content'>
+						<div class='flex items-center text-black'>
+							<h4 class='font-bold lg:text-50 md:text-48 sm:text-40 text-30 mb-0'>
+								06</h4>
+							<span class='h-45 mx-10 w-px bg-black inline-block'></span>
+							<h5 class='text-16 mb-0 font-bold uppercase tracking-13 '>
+								UPCYCLING</h5>
+						</div>
+						<h3
+							class='lg:text-64 lg:leading-tight md:leading-tight sm:leading-tight leading-none md:text-6xl text-45 font-extrabold tracking-wider text-black max-w-md mb-30'>
+							NO MORE<br>WASTE</h3>
+						<div class='lg:text-left text-center'>
+							<a class='sm:py-16 hoverable sm:px-40 py-10 px-20  tracking-13 font-extrabold text-13 border-2 rounded-80 bg-white border-black text-black left-1/2 hover:text-white hover:bg-black'
+								href="upcycling.html">
+								LEARN MORE
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cursor sm:block hidden">
+		<div class="cursor__ball cursor__ball--big ">
+			<svg height="30" width="30">
+				<circle cx="15" cy="15" r="10" stroke-width="1"></circle>
+			</svg>
+		</div>
+	</div>
+	<div class='absolute right-30 bottom-20 lg:block hidden' style="z-index:49">
+		<div class='flex items-center sm:text-left sm:justify-end justify-center text-center pr-40'>
+			<h6 class='mr-36 mb-0 text-10 font-medium text-grey tracking-normal'>
+				&copy; 2024,sfdenim . All Rights Reserved.</h6>
+			<div class='social sm:flex hidden mr-36'>
+				<a target="_blank" class='hoverable js-hover-setup inline-block mr-10 mx-10' href="https://www.linkedin.com/company/s-f-denim-apparels-limited/">
+					<svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-linkedin" viewBox="0 0 16 16">
+						<path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+					  </svg>
+				</a>
+				<a target="_blank" class='hoverable js-hover-setup inline-block mx-10' href="https://www.facebook.com/sfdenim/">
+					<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M3.31836 6.66667H0.818359V10H3.31836V20H7.48503V10H10.485L10.8184 6.66667H7.48503V5.25C7.48503 4.5 7.65169 4.16667 8.40169 4.16667H10.8184V0H7.65169C4.65169 0 3.31836 1.33333 3.31836 3.83333V6.66667Z"
+							fill="black" />
+					</svg>
+				</a>
+				<a target="_blank" class='hoverable js-hover-setup inline-block mx-10' href="">
+					<svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M20.7029 3.06767C21.2048 3.07855 21.6979 3.20037 22.1459 3.42418C22.3967 3.57373 22.5858 3.80608 22.6798 4.08015C22.9358 4.74253 23.0866 5.43999 23.1272 6.14788C23.2282 7.16036 23.2715 8.38674 23.2715 9.94111C23.2715 11.4955 23.2715 12.7932 23.1272 13.7629C23.084 14.4797 22.9333 15.1861 22.6798 15.8591C22.5898 16.1275 22.4055 16.3551 22.1603 16.5008C21.7134 16.7242 21.2181 16.8368 20.7173 16.8288C17.1243 17.0285 9.04344 17.0285 5.4215 16.8288C4.92005 16.8147 4.42769 16.693 3.9785 16.4723C3.72778 16.3228 3.53867 16.0904 3.44459 15.8163C3.18899 15.1489 3.03814 14.4468 2.99726 13.7343C2.89625 12.7361 2.85296 11.4955 2.85296 9.94111C2.85296 8.38674 2.85296 7.08906 2.99726 6.14788C3.03779 5.43999 3.18868 4.74253 3.44459 4.08015C3.53867 3.80608 3.72778 3.57373 3.9785 3.42418C4.42619 3.19945 4.91947 3.07758 5.4215 3.06767C10.5107 2.76591 15.6137 2.76591 20.7029 3.06767ZM0.818359 9.94111C0.818359 16.2156 1.3234 18.4973 5.32052 18.8395C9.00018 19.0534 17.182 19.0534 20.8617 18.8395C24.8588 18.6399 25.3638 16.2156 25.3638 9.94111C25.3638 3.6666 24.8588 1.38495 20.8617 1.04271C15.6857 0.743252 10.4965 0.743252 5.32052 1.04271C1.3234 1.35643 0.818359 3.68086 0.818359 9.94111ZM11.4966 13.2638C11.3415 13.3324 11.1715 13.3618 11.002 13.3493C10.8326 13.3368 10.6689 13.2829 10.5257 13.1924C10.3826 13.1019 10.2645 12.9776 10.1821 12.8307C10.0996 12.6838 10.0555 12.519 10.0536 12.3511V7.54539C10.0555 7.37746 10.0996 7.21264 10.1821 7.06578C10.2645 6.91891 10.3826 6.79462 10.5257 6.70409C10.6689 6.61356 10.8326 6.55964 11.002 6.54719C11.1715 6.53473 11.3415 6.56413 11.4966 6.63273L16.3739 9.04271C16.5441 9.12681 16.6872 9.25607 16.7872 9.416C16.8872 9.57594 16.9401 9.76023 16.9401 9.94824C16.9401 10.1362 16.8872 10.3205 16.7872 10.4805C16.6872 10.6404 16.5441 10.7697 16.3739 10.8538L11.4966 13.2638Z"
+							fill="black" />
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class='contact-block sm:flex hidden items-center absolute -right-30 bottom-48 transform rotate-90'>
+			<a href="contact.html"
+				class='text-black text-12 transition-all duration-200 hover:text-blue-5 font-extrabold tracking-17 mb-0 mr-12'>
+				CONTACT
+			</a>
+			<div class='h-3 w-24 bg-black'></div>
+		</div>
+	</div>
+	<script  src="asstes/js/mobile-menu-item.js"></script>
+	<script type="text/x-template" id="mobile-menu-item-template"><li
+	:id="'jet-menu-item-'+itemDataObject.itemId"
+	:class="itemClasses"
+>
+	<div
+		class="jet-mobile-menu__item-inner"
+		tabindex="1"
+		:aria-label="itemDataObject.name"
+		v-on:click="itemSubHandler"
+		v-on:keyup.enter="itemSubHandler"
+	>
+		<a
+			:class="itemLinkClasses"
+			:href="itemDataObject.url"
+			:rel="itemDataObject.xfn"
+			:title="itemDataObject.attrTitle"
+			:target="itemDataObject.target"
+		>
+			<div class="jet-menu-item-wrapper">
+				<div
+					class="jet-menu-icon"
+					v-if="isIconVisible"
+					v-html="itemIconHtml"
+				></div>
+				<div class="jet-menu-name">
+					<span
+						class="jet-menu-label"
+						v-html="itemDataObject.name"
+					></span>
+					<small
+						class="jet-menu-desc"
+						v-if="isDescVisible"
+						v-html="itemDataObject.description"
+					></small>
+				</div>
+				<small
+					class="jet-menu-badge"
+					v-if="isBadgeVisible"
+				>
+					<span class="jet-menu-badge__inner">{{ itemDataObject.badgeText }}</span>
+				</small>
+			</div>
+		</a>
+		<span
+			class="jet-dropdown-arrow"
+			v-if="isSub && !templateLoadStatus"
+			v-html="dropdownIconHtml"
+			v-on:click="markerSubHandler"
+		>
+		</span>
+		<div
+			class="jet-mobile-menu__template-loader"
+			v-if="templateLoadStatus"
+		>
+			<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="24px" height="25px" viewBox="0 0 128 128" xml:space="preserve">
+				<g>
+					<linearGradient id="linear-gradient">
+						<stop offset="0%" :stop-color="loaderColor" stop-opacity="0"/>
+						<stop offset="100%" :stop-color="loaderColor" stop-opacity="1"/>
+					</linearGradient>
+				<path d="M63.85 0A63.85 63.85 0 1 1 0 63.85 63.85 63.85 0 0 1 63.85 0zm.65 19.5a44 44 0 1 1-44 44 44 44 0 0 1 44-44z" fill="url(#linear-gradient)" fill-rule="evenodd"/>
+				<animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1080ms" repeatCount="indefinite"></animateTransform>
+				</g>
+			</svg>
+		</div>
+	</div>
+
+	<transition name="menu-container-expand-animation">
+		<mobile-menu-list
+			v-if="isDropdownLayout && subDropdownVisible"
+			:depth="depth+1"
+			:children-object="itemDataObject.children"
+		></mobile-menu-list>
+	</transition>
+
+</li></script>
+	<script type="text/x-template" id="mobile-menu-list-template"><div
+	class="jet-mobile-menu__list"
+	role="navigation"
+>
+	<ul class="jet-mobile-menu__items">
+		<mobile-menu-item
+			v-for="(item, index) in childrenObject"
+			:key="item.id"
+			:item-data-object="item"
+			:depth="depth"
+		></mobile-menu-item>
+	</ul>
+</div></script>
+	<script type="text/x-template" id="mobile-menu-template"><div
+	:class="instanceClass"
+	v-on:keyup.esc="escapeKeyHandler"
+>
+	<div
+		class="jet-mobile-menu__toggle"
+		ref="toggle"
+		tabindex="1"
+		aria-label="Open/Close Menu"
+		v-on:click="menuToggle"
+		v-on:keyup.enter="menuToggle"
+	>
+		<div
+			class="jet-mobile-menu__template-loader"
+			v-if="toggleLoaderVisible"
+		>
+			<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="24px" height="25px" viewBox="0 0 128 128" xml:space="preserve">
+				<g>
+					<linearGradient id="linear-gradient">
+						<stop offset="0%" :stop-color="loaderColor" stop-opacity="0"/>
+						<stop offset="100%" :stop-color="loaderColor" stop-opacity="1"/>
+					</linearGradient>
+				<path d="M63.85 0A63.85 63.85 0 1 1 0 63.85 63.85 63.85 0 0 1 63.85 0zm.65 19.5a44 44 0 1 1-44 44 44 44 0 0 1 44-44z" fill="url(#linear-gradient)" fill-rule="evenodd"/>
+				<animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1080ms" repeatCount="indefinite"></animateTransform>
+				</g>
+			</svg>
+		</div>
+
+		<div
+			class="jet-mobile-menu__toggle-icon"
+			v-if="!menuOpen && !toggleLoaderVisible"
+			v-html="toggleClosedIcon"
+		></div>
+		<div
+			class="jet-mobile-menu__toggle-icon"
+			v-if="menuOpen && !toggleLoaderVisible"
+			v-html="toggleOpenedIcon"
+		></div>
+		<span
+			class="jet-mobile-menu__toggle-text"
+			v-if="toggleText"
+			v-html="toggleText"
+		></span>
+
+	</div>
+
+	<transition name="cover-animation">
+		<div
+			class="jet-mobile-menu-cover"
+			v-if="menuContainerVisible && coverVisible"
+			v-on:click="closeMenu"
+		></div>
+	</transition>
+
+	<transition :name="showAnimation">
+		<div
+			class="jet-mobile-menu__container"
+			v-if="menuContainerVisible"
+		>
+			<div
+				class="jet-mobile-menu__container-inner"
+			>
+				<div
+					class="jet-mobile-menu__header-template"
+					v-if="headerTemplateVisible"
+				>
+					<div
+						class="jet-mobile-menu__header-template-content"
+						ref="header-template-content"
+						v-html="headerContent"
+					></div>
+				</div>
+
+				<div
+					class="jet-mobile-menu__controls"
+				>
+					<div
+						class="jet-mobile-menu__breadcrumbs"
+						v-if="isBreadcrumbs"
+					>
+						<div
+							class="jet-mobile-menu__breadcrumb"
+							v-for="(item, index) in breadcrumbsPathData"
+							:key="index"
+						>
+							<div
+								class="breadcrumb-label"
+								v-on:click="breadcrumbHandle(index+1)"
+								v-html="item"
+							></div>
+							<div
+								class="breadcrumb-divider"
+								v-html="breadcrumbIcon"
+								v-if="(breadcrumbIcon && index !== breadcrumbsPathData.length-1)"
+							></div>
+						</div>
+					</div>
+					<div
+						class="jet-mobile-menu__back"
+						ref="back"
+						tabindex="1"
+						aria-label="Close Menu"
+						v-if="!isBack && isClose"
+						v-html="closeIcon"
+						v-on:click="menuToggle"
+						v-on:keyup.enter="menuToggle"
+					></div>
+					<div
+						class="jet-mobile-menu__back"
+						ref="back"
+						tabindex="1"
+						aria-label="Back to Prev Items"
+						v-if="isBack"
+						v-html="backIcon"
+						v-on:click="goBack"
+						v-on:keyup.enter="goBack"
+					></div>
+				</div>
+
+				<div
+					class="jet-mobile-menu__before-template"
+					v-if="beforeTemplateVisible"
+				>
+					<div
+						class="jet-mobile-menu__before-template-content"
+						ref="before-template-content"
+						v-html="beforeContent"
+					></div>
+				</div>
+
+				<div
+					class="jet-mobile-menu__body"
+				>
+					<transition :name="animation">
+						<mobile-menu-list
+							v-if="!templateVisible"
+							:key="depth"
+							:depth="depth"
+							:children-object="itemsList"
+						></mobile-menu-list>
+						<div
+							class="jet-mobile-menu__template"
+							ref="template-content"
+							v-if="templateVisible"
+						>
+							<div
+								class="jet-mobile-menu__template-content"
+								v-html="itemTemplateContent"
+							></div>
+						</div>
+					</transition>
+				</div>
+
+				<div
+					class="jet-mobile-menu__after-template"
+					v-if="afterTemplateVisible"
+				>
+					<div
+						class="jet-mobile-menu__after-template-content"
+						ref="after-template-content"
+						v-html="afterContent"
+					></div>
+				</div>
+
+			</div>
+		</div>
+	</transition>
+</div></script>
+	<script  type='text/javascript' src='asstes/js/js1.js' id='regenerator-runtime-js'></script>
+	<script  type='text/javascript' src='asstes/js/js2.js' id='wp-polyfill-js'></script>
+	<script  type='text/javascript' src='asstes/js/js4.js' id='splide-js'></script>
+	<script  type='text/javascript' src='asstes/js/js5.js' id='gsap-TweenMax-js'></script>
+	<script  type='text/javascript' src='asstes/js/easings-js.js' id='easings-js'></script>
+	<script  type='text/javascript' src='asstes/js/scrolloverflow-js.js'
+		id='scrolloverflow-js'></script>
+	<script  type='text/javascript' src='asstes/js/fullpage-js.js' id='fullpage-js'></script>
+	<script  type='text/javascript' src='asstes/js/letweb-js.js' id='letweb-js'></script>
+	<script  type='text/javascript' src='asstes/js/nicescroll-js.js' id='nicescroll-js'></script>
+	<script  type='text/javascript' src='asstes/js/fancybox-js.js' id='fancybox-js'></script>
+	<script  type='text/javascript' src='asstes/js/sticky-js.js' id='sticky-js'></script>
+	<script  type='text/javascript' src='asstes/js/odometer-js.js' id='odometer-js'></script>
+	<script  type='text/javascript' src='asstes/js/main-js.js' id='theme-js'></script>
+	<script  type='text/javascript' src='asstes/js/jet-vue-js.js' id='jet-vue-js'></script>
+	<script  type='text/javascript' src='asstes/js/public-scripts-js.js'
+		id='jet-menu-public-scripts-js'></script>
+	<script  type='text/javascript' src='asstes/js/lw-bowser-js.js' id='lw-bowser-js'></script>
+	<script  type='text/javascript' src='asstes/js/lw-tracking-js.js' id='lw-tracking-js'></script>
+	<script  type='text/javascript' src='asstes/js/wp-embed-js.js' id='wp-embed-js'></script>
+	<script  type='text/javascript' src='asstes/js/runtime-js.js'
+		id='elementor-webpack-runtime-js'></script>
+	<script  type='text/javascript' src='asstes/js/frontend-js.js'
+		id='elementor-frontend-modules-js'></script>
+	<script  type='text/javascript' src='asstes/js/waypoints-js.js' id='waypoints-js'></script>
+	<script  type='text/javascript' src='asstes/js/jquery-ui-core-js.js'
+		id='jquery-ui-core-js'></script>
+	<script  type='text/javascript' src='asstes/js/swiper-js.js' id='swiper-js'></script>
+	<script  type='text/javascript' src='asstes/js/share-link-js.js' id='share-link-js'></script>
+	<script  type='text/javascript' src='asstes/js/dialog-js.js' id='dialog-js'></script>
+	<script  type='text/javascript' src='asstes/js/frontend-js.js'
+		id='elementor-frontend-js'></script>
+	<script  type='text/javascript' src='asstes/js/jet-menu.js'
+		id='jet-menu-elementor-widgets-scripts-js'></script>
+	<script  type='text/javascript' src='asstes/js/preloaded-modules-js.js'
+		id='preloaded-modules-js'></script>
+</body>
+
+</html>

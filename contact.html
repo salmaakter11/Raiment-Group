@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en-US">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="UTF-8">
+	<title>SFDENIM </title>
+	<link rel="stylesheet" href="asstes/css/style.css">
+	<link rel="stylesheet" href="asstes/css/tailwind.css">
+	<link rel="stylesheet" href="asstes/css/fontawesome.css">
+	<link rel="stylesheet" href="asstes/css/fullPage.css">
+	<link rel="stylesheet" href="asstes/css/elementor-icons.css">
+	<script type='text/javascript' src='asstes/js/jquery.minaf6c.js' id='jquery-core-js'></script>
+	<script  type='text/javascript' src='asstes/js/jQuery-Migrat- v3.3.2.js'
+		id='jquery-migrate-js'></script>
+	<link rel="icon" href="asstes/img/logo.png" sizes="192x192" />
+</head>
+
+<body
+	class="page-template-default page page-id-2071 font-body jet-desktop-menu-active elementor-default elementor-kit-5 elementor-page elementor-page-2071"
+	x-data="{ atTop: true, openMenu: false }" :class="{ 'overflow-hidden': openMenu }"
+	x-on:scroll.window="atTop = (window.pageYOffset > 200) ? false : true; ">
+	<div class="c-cursor js-cursor"></div>
+	<div class="site-header">
+		<div>
+			<div class='fixed header-inner flex py-20 px-15 lg:px-45 left-0 top-0 items-center w-full justify-between z-50'
+				:class="{'fixed': atTop }">
+				<div class='logo max-w-127'>
+					<a class="hoverable js-hover-setup" href="index.html">
+						<img class='w-full h-auto object-contain' src="asstes/img/logo.png" />
+					</a>
+				</div>
+				<div class='flex text-10 font-bold tracking-13 uppercase text-black items-center'>
+					<div @click='openMenu=true;if(typeof fullpage_api !== "undefined"){fullpage_api.setAllowScrolling(false)}'
+						class='menu-icon cursor-pointer hoverable js-hover-setup'>
+						<svg width="32" height="14" viewBox="0 0 32 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="32" height="4" rx="2" fill="white" />
+							<rect x="9" y="10" width="23" height="4" rx="2" fill="white" />
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div :class="{'visible opacity-100 scale-100': openMenu, 'opacity-0 invisible scale-95': !openMenu}"
+				class='invisible opacity-0 menu bg-black transform transition-all duration-200 fixed left-0 top-0 w-full h-full z-50'>
+				<div class='sm:grid overflow-auto sm:grid-cols-11 flex flex-col h-full'>
+					<div class='sm:col-span-5 sm:order-1 order-2 sm:py-37 py-20 sm:px-45 px-10'>
+						<div class='flex h-full sm:pt-0 pt-32 sm:px-0 px-15 sm:pb-0 pb-15 flex-col justify-between'>
+							<div class='logo sm:block hidden max-w-127'>
+								<a class="hoverable js-hover-setup" href="index.html"><img
+										class='w-full h-auto object-contain' src="asstes/img/logo.png" /></a>
+							</div>
+							<div>
+								<div class='social mb-20'>
+									<a target="_blank" class='hoverable js-hover-setup inline-block mr-10' href="">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M10 1.83333C12.6667 1.83333 13 1.83333 14.0833 1.91667C16.8333 2 18.0833 3.33333 18.1667 6C18.25 7.08333 18.25 7.33333 18.25 10C18.25 12.6667 18.25 13 18.1667 14C18.0833 16.6667 16.75 18 14.0833 18.0833C13 18.1667 12.75 18.1667 10 18.1667C7.33333 18.1667 7 18.1667 6 18.0833C3.25 18 2 16.6667 1.91667 14C1.83333 12.9167 1.83333 12.6667 1.83333 10C1.83333 7.33333 1.83333 7 1.91667 6C2 3.33333 3.33333 2 6 1.91667C7 1.83333 7.33333 1.83333 10 1.83333ZM10 0C7.25 0 6.91667 0 5.91667 0.0833333C2.25 0.25 0.25 2.25 0.0833333 5.91667C0 6.91667 0 7.25 0 10C0 12.75 0 13.0833 0.0833333 14.0833C0.25 17.75 2.25 19.75 5.91667 19.9167C6.91667 20 7.25 20 10 20C12.75 20 13.0833 20 14.0833 19.9167C17.75 19.75 19.75 17.75 19.9167 14.0833C20 13.0833 20 12.75 20 10C20 7.25 20 6.91667 19.9167 5.91667C19.75 2.25 17.75 0.25 14.0833 0.0833333C13.0833 0 12.75 0 10 0ZM10 4.83333C7.16667 4.83333 4.83333 7.16667 4.83333 10C4.83333 12.8333 7.16667 15.1667 10 15.1667C12.8333 15.1667 15.1667 12.8333 15.1667 10C15.1667 7.16667 12.8333 4.83333 10 4.83333ZM10 13.3333C8.16667 13.3333 6.66667 11.8333 6.66667 10C6.66667 8.16667 8.16667 6.66667 10 6.66667C11.8333 6.66667 13.3333 8.16667 13.3333 10C13.3333 11.8333 11.8333 13.3333 10 13.3333ZM15.3333 3.5C14.6667 3.5 14.1667 4 14.1667 4.66667C14.1667 5.33333 14.6667 5.83333 15.3333 5.83333C16 5.83333 16.5 5.33333 16.5 4.66667C16.5 4 16 3.5 15.3333 3.5Z"
+												fill="white" />
+										</svg>
+									</a>
+									<a target="_blank" class='hoverable js-hover-setup inline-block mx-10' href="">
+										<svg width="11" height="20" viewBox="0 0 11 20" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M3.31836 6.66667H0.818359V10H3.31836V20H7.48503V10H10.485L10.8184 6.66667H7.48503V5.25C7.48503 4.5 7.65169 4.16667 8.40169 4.16667H10.8184V0H7.65169C4.65169 0 3.31836 1.33333 3.31836 3.83333V6.66667Z"
+												fill="white" />
+										</svg>
+									</a>
+									<a target="_blank" class='hoverable js-hover-setup inline-block mx-10' href="">
+										<svg width="26" height="19" viewBox="0 0 26 19" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M20.7029 3.06767C21.2048 3.07855 21.6979 3.20037 22.1459 3.42418C22.3967 3.57373 22.5858 3.80608 22.6798 4.08015C22.9358 4.74253 23.0866 5.43999 23.1272 6.14788C23.2282 7.16036 23.2715 8.38674 23.2715 9.94111C23.2715 11.4955 23.2715 12.7932 23.1272 13.7629C23.084 14.4797 22.9333 15.1861 22.6798 15.8591C22.5898 16.1275 22.4055 16.3551 22.1603 16.5008C21.7134 16.7242 21.2181 16.8368 20.7173 16.8288C17.1243 17.0285 9.04344 17.0285 5.4215 16.8288C4.92005 16.8147 4.42769 16.693 3.9785 16.4723C3.72778 16.3228 3.53867 16.0904 3.44459 15.8163C3.18899 15.1489 3.03814 14.4468 2.99726 13.7343C2.89625 12.7361 2.85296 11.4955 2.85296 9.94111C2.85296 8.38674 2.85296 7.08906 2.99726 6.14788C3.03779 5.43999 3.18868 4.74253 3.44459 4.08015C3.53867 3.80608 3.72778 3.57373 3.9785 3.42418C4.42619 3.19945 4.91947 3.07758 5.4215 3.06767C10.5107 2.76591 15.6137 2.76591 20.7029 3.06767ZM0.818359 9.94111C0.818359 16.2156 1.3234 18.4973 5.32052 18.8395C9.00018 19.0534 17.182 19.0534 20.8617 18.8395C24.8588 18.6399 25.3638 16.2156 25.3638 9.94111C25.3638 3.6666 24.8588 1.38495 20.8617 1.04271C15.6857 0.743252 10.4965 0.743252 5.32052 1.04271C1.3234 1.35643 0.818359 3.68086 0.818359 9.94111ZM11.4966 13.2638C11.3415 13.3324 11.1715 13.3618 11.002 13.3493C10.8326 13.3368 10.6689 13.2829 10.5257 13.1924C10.3826 13.1019 10.2645 12.9776 10.1821 12.8307C10.0996 12.6838 10.0555 12.519 10.0536 12.3511V7.54539C10.0555 7.37746 10.0996 7.21264 10.1821 7.06578C10.2645 6.91891 10.3826 6.79462 10.5257 6.70409C10.6689 6.61356 10.8326 6.55964 11.002 6.54719C11.1715 6.53473 11.3415 6.56413 11.4966 6.63273L16.3739 9.04271C16.5441 9.12681 16.6872 9.25607 16.7872 9.416C16.8872 9.57594 16.9401 9.76023 16.9401 9.94824C16.9401 10.1362 16.8872 10.3205 16.7872 10.4805C16.6872 10.6404 16.5441 10.7697 16.3739 10.8538L11.4966 13.2638Z"
+												fill="white" />
+										</svg>
+									</a>
+								</div>
+								<h6
+									class='text-12 font-bold tracking-13 uppercase text-white mb-17 hover:text-blue-5 transition-all duration-200'>
+									<a class="hoverable js-hover-setup" href="contact.html">Contact us</a>
+								</h6>
+								<div class='flex flex-wrap items-center mb-17 hidden'>
+									<h6
+										class='mr-15 mb-0 text-12 font-bold tracking-13 uppercase text-white hover:text-blue-5 transition-all duration-200'>
+										<a class="hoverable js-hover-setup" href="terms-and-conditions.html.html">Terms
+											And Conditions</a>
+									</h6>
+									<div class='w-px h-10 mb-2 bg-white inline-block mr-15'></div>
+									<h6
+										class='mb-0 flex-shrink-0 text-12 font-bold tracking-13 uppercase text-white  hover:text-blue-5 transition-all duration-200'>
+										<a class="hoverable js-hover-setup" href="privacy-policy.html.html">Privacy
+											Policy</a>
+									</h6>
+								</div>
+								<p class='font-medium text-10 text-white'>&copy; 2022, SFDENIM. All Rights Reserved.</p>
+							</div>
+						</div>
+					</div>
+					<div class='logo absolute left-20 top-24 sm:hidden max-w-127'>
+						<a class="hoverable js-hover-setup" href="index.html">
+							<img class='w-full h-auto object-contain' src="asstes/img/logo.png" />
+						</a>
+					</div>
+					<div
+						class='vt-main-menu sm:col-span-6 sm:flex-none flex-auto sm:order-2 order-1 flex items-center sm:justify-start justify-center lg:pl-188 sm:py-37 pt-107 pb-20 sm:px-45 px-10 bg-white'>
+						<ul id="menu-main-menu" class="sm:pl-80 md:pl-0 pl-10">
+							<li id="menu-item-2197"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2197 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+								<a href="commitments.html"
+									class="inline-block py-20 hoverable js-hover-setup">Commitments</a>
+							</li>
+							<li id="menu-item-2196"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2196 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+								<a href="circularity.html"
+									class="inline-block py-20 hoverable js-hover-setup">Circularity</a>
+							</li>
+							<li id="menu-item-2200"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2200 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+								<a href="speed-to-market.html" class="inline-block py-20 hoverable js-hover-setup">Speed
+									To Market™</a>
+							</li>
+							<li id="menu-item-2198"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+								<a href="mill.html" class="inline-block py-20 hoverable js-hover-setup">Mill</a>
+							</li>
+							<li id="menu-item-2199"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2199 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+								<a href="sf.html" class="inline-block py-20 hoverable js-hover-setup">SF USA</a>
+							</li>
+							<li id="menu-item-2201"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2201 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+								<a href="upcycling.html"
+									class="inline-block py-20 hoverable js-hover-setup">Upcycling</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div @click='openMenu=false;if(typeof fullpage_api !== "undefined"){fullpage_api.setAllowScrolling(true)}'
+					class='hoverable js-hover-setup z-1 close-menu absolute sm:right-37 right-15 top-15 sm:top-28 p-10 cursor-pointer'>
+					<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="3.45605" width="32" height="4" rx="2" transform="rotate(45 3.45605 0)" fill="black" />
+						<rect x="25.4561" y="3" width="32" height="4" rx="2" transform="rotate(135 25.4561 3)"
+							fill="black" />
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-elementor-type="wp-page" data-elementor-id="2071" class="elementor elementor-2071"
+		data-elementor-settings="[]">
+		<div class="elementor-inner">
+			<div class="elementor-section-wrap">
+				<section
+					class="elementor-section elementor-top-section elementor-element elementor-element-1bcfcb7 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+					data-id="1bcfcb7" data-element_type="section">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-row">
+							<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c90cdd7"
+								data-id="c90cdd7" data-element_type="column">
+								<div class="elementor-column-wrap elementor-element-populated">
+									<div class="elementor-widget-wrap">
+										<div class="elementor-element elementor-element-e1663dc elementor-widget elementor-widget-lw_contact_block"
+											data-id="e1663dc" data-element_type="widget"
+											data-widget_type="lw_contact_block.default">
+											<div class="elementor-widget-container">
+												<div class='bg-cover pt-160 md:pb-50 pb-50 relative font-body bg-no-repeat bg-center min-h-screen'
+													style='background-image: url(asstes/img/contact-banner.jpg)'>
+													<div
+														class='absolute left-0 top-0 w-full h-full bg-black bg-opacity-40'>
+													</div>
+													<div class="container z-1 relative h-full">
+														<div
+															class='grid grid-cols-1 lg:grid-cols-2 text-white lg:gap-10 gap-30 items-center'>
+															<div>
+																<div class=' max-w-350'>
+																	<h6
+																		class='sm:mb-20 mb-10 text-16 font-bold text-white tracking-13 uppercase'>
+																		Contact Us</h6>
+																	<h3
+																		class='font-medium tracking-wider uppercase lg:leading-none lg:text-38 md:text-32 text-white sm:text-30 text-38 lg:mb-40 md:mb-30 mb-20'>
+																		Your interest matters</h3>
+																	<h6
+																		class='font-extrabold text-16 tracking-wider text-white uppercase'>
+																		SFDENIM</h6>
+																	<p
+																		class='text-16 tracking-wider text-white font-normal'>
+																		Address: 225, Tejgaon I/A, ‍Dhaka-1208,
+																		Bangladesh [The road to Shanti Niketon
+																		Residential, Behind Nina Kabbo Tower, Dhaka,
+																		Bangladesh</p>
+																	<p
+																		class='text-16 tracking-widertext-white hover:text-blue transition-all duration-200 font-normal'>
+
+																		<a class="js-hover-setup inline-block align-middle"
+																			href="mailto:info@sai-tex.com">Contact:
+																			01688-643225</a>
+																	</p>
+																	<p
+																		class='text-16 tracking-widertext-white hover:text-blue transition-all duration-200 font-normal'>
+																		<svg class='mr-8 inline-block align-middle'
+																			width="27" height="21" viewBox="0 0 27 21"
+																			fill="none"
+																			xmlns="http://www.w3.org/2000/svg">
+																			<path
+																				d="M3.59915 20.2758C2.9108 20.2725 2.25156 19.9901 1.76481 19.49C1.27807 18.9898 1.0032 18.3125 1 17.6052V3.67244C1.00275 2.96484 1.2774 2.28701 1.76419 1.7865C2.25099 1.28598 2.9105 1.0033 3.59915 1H23.5412C24.2298 1.0033 24.8893 1.28598 25.3761 1.7865C25.8629 2.28701 26.1376 2.96484 26.1403 3.67244V17.6052C26.1371 18.3125 25.8623 18.9898 25.3755 19.49C24.8888 19.9901 24.2295 20.2725 23.5412 20.2758H3.59915ZM2.20643 17.6052C2.20643 17.9847 2.35316 18.3487 2.61435 18.6171C2.87554 18.8854 3.22978 19.0362 3.59915 19.0362H23.5412C23.9106 19.0362 24.2648 18.8854 24.526 18.6171C24.7872 18.3487 24.9339 17.9847 24.9339 17.6052V5.24299L15.5696 11.6575C14.9683 12.0331 14.2782 12.2318 13.5745 12.2318C12.8709 12.2318 12.1807 12.0331 11.5795 11.6575L2.21689 5.24299L2.20643 17.6052ZM3.59915 2.245C3.22978 2.245 2.87554 2.39577 2.61435 2.66414C2.35316 2.9325 2.20643 3.29649 2.20643 3.67602V3.75113L12.241 10.6272C12.6435 10.8662 13.1001 10.992 13.5649 10.992C14.0298 10.992 14.4864 10.8662 14.8889 10.6272L24.9234 3.75292V3.67602C24.9234 3.29649 24.7767 2.9325 24.5155 2.66414C24.2543 2.39577 23.9001 2.245 23.5307 2.245H3.59915Z"
+																				fill="white" stroke="white"
+																				stroke-width="0.5" />
+																		</svg>
+																		<a class="js-hover-setup inline-block align-middle"
+																			href="mailto:info@sfdenim.com">Mail:info@sfdenim.com</a>
+																	</p>
+
+																</div>
+															</div>
+															<div>
+																<div class='bg-white md:py-45 md:px-56 py-45 px-20'>
+																	<div role="form" class="wpcf7"
+																		id="wpcf7-f3014-p2071-o1" lang="en-US"
+																		dir="ltr">
+																		<div class="screen-reader-response">
+																			<p role="status" aria-live="polite"
+																				aria-atomic="true"></p>
+																			<ul></ul>
+																		</div>
+																		<form action="" method="post"
+																			class="wpcf7-form init"
+																			novalidate="novalidate" data-status="init">
+																			<div style="display: none;">
+																				<input type="hidden" name="_wpcf7"
+																					value="3014" />
+																				<input type="hidden"
+																					name="_wpcf7_version"
+																					value="5.5.3" />
+																				<input type="hidden"
+																					name="_wpcf7_locale"
+																					value="en_US" />
+																				<input type="hidden"
+																					name="_wpcf7_unit_tag"
+																					value="wpcf7-f3014-p2071-o1" />
+																				<input type="hidden"
+																					name="_wpcf7_container_post"
+																					value="2071" />
+																				<input type="hidden"
+																					name="_wpcf7_posted_data_hash"
+																					value="" />
+																				<input type="hidden"
+																					name="_form_data_trace"
+																					value="[]" />
+																				<input type="hidden" name="_current_url"
+																					value="index.html" />
+																			</div>
+																			<h5
+																				class='sm:mb-30 mb-20 text-16 font-bold text-black tracking-13'>
+																				FILL YOUR DETAILS BELOW</h5>
+																			<p><label class='w-full block mb-12'><span
+																						class="wpcf7-form-control-wrap contact-name"><input
+																							type="text"
+																							name="contact-name" value=""
+																							size="40"
+																							class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required sm-py-16 py-12 focus-border-blue transition-all focus-outline-none outline-none duration-200 w-full block text-black placeholder-black px-32 border border-black rounded-80 bg-white"
+																							aria-required="true"
+																							aria-invalid="false"
+																							placeholder="Full Name" /></span></label><label
+																					class='w-full block mb-12'><span
+																						class="wpcf7-form-control-wrap contact-company"><input
+																							type="text"
+																							name="contact-company"
+																							value="" size="40"
+																							class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required sm-py-16 py-12 focus-border-blue transition-all focus-outline-none outline-none duration-200 w-full block text-black placeholder-black px-32 border border-black rounded-80 bg-white"
+																							aria-required="true"
+																							aria-invalid="false"
+																							placeholder="Company Name" /></span></label><label
+																					class='w-full block mb-12'><span
+																						class="wpcf7-form-control-wrap contact-email"><input
+																							type="email"
+																							name="contact-email"
+																							value="" size="40"
+																							class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email sm-py-16 py-12 focus-border-blue transition-all focus-outline-none outline-none duration-200 w-full block text-black placeholder-black px-32 border border-black rounded-80 bg-white"
+																							aria-required="true"
+																							aria-invalid="false"
+																							placeholder="Business Email" /></span></label><label
+																					class='w-full block mb-12'><span
+																						class="wpcf7-form-control-wrap contact-phone"><input
+																							type="tel"
+																							name="contact-phone"
+																							value="" size="40"
+																							class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel sm-py-16 py-12 focus-border-blue transition-all focus-outline-none outline-none duration-200 w-full block text-black placeholder-black px-32 border border-black rounded-80 bg-white"
+																							aria-invalid="false"
+																							placeholder="Phone" /></span></label><label
+																					class='w-full block mb-12'><span
+																						class="wpcf7-form-control-wrap contact-message"><textarea
+																							name="contact-message"
+																							cols="40" rows="10"
+																							class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required sm-py-16 py-12 focus-border-blue transition-all focus-outline-none outline-none duration-200 w-full block text-black placeholder-black px-32 border border-black rounded-3xl min-h-143 bg-white"
+																							aria-required="true"
+																							aria-invalid="false"
+																							placeholder="Message"></textarea></span></label>
+																			<div class="vt-submit-wrapper relative">
+																				<input type="submit" value="Submit Form"
+																					class="wpcf7-form-control has-spinner wpcf7-submit pt-16 mt-12 hover-text-white cursor-pointer hover-bg-black pb-14 px-24 border-2 transition-all duration-200 bg-white rounded-80 border-black text-black tracking-13 text-13 font-extrabold js-hover-setup uppercase" />
+																			</div>
+																			<div class="wpcf7-response-output"
+																				aria-hidden="true"></div>
+																		</form>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class='w-full relative pt-56'>
+														<div
+															class='flex  sm:text-left items-center sm:justify-end justify-center text-center pr-40'>
+															<h6
+																class='mr-36 mb-0 text-10 font-medium text-white tracking-normal'>
+																&copy; 2024, SFDENIM. All Rights Reserved.</h6>
+															<div class='social sm:flex hidden mr-36'>
+																<a target="_blank"
+																	class="hoverable js-hover-setup inline-block mr-10"
+																	href="" rel="noopener">
+																	<svg width="20" height="20" viewBox="0 0 20 20"
+																		fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path
+																			d="M10 1.83333C12.6667 1.83333 13 1.83333 14.0833 1.91667C16.8333 2 18.0833 3.33333 18.1667 6C18.25 7.08333 18.25 7.33333 18.25 10C18.25 12.6667 18.25 13 18.1667 14C18.0833 16.6667 16.75 18 14.0833 18.0833C13 18.1667 12.75 18.1667 10 18.1667C7.33333 18.1667 7 18.1667 6 18.0833C3.25 18 2 16.6667 1.91667 14C1.83333 12.9167 1.83333 12.6667 1.83333 10C1.83333 7.33333 1.83333 7 1.91667 6C2 3.33333 3.33333 2 6 1.91667C7 1.83333 7.33333 1.83333 10 1.83333ZM10 0C7.25 0 6.91667 0 5.91667 0.0833333C2.25 0.25 0.25 2.25 0.0833333 5.91667C0 6.91667 0 7.25 0 10C0 12.75 0 13.0833 0.0833333 14.0833C0.25 17.75 2.25 19.75 5.91667 19.9167C6.91667 20 7.25 20 10 20C12.75 20 13.0833 20 14.0833 19.9167C17.75 19.75 19.75 17.75 19.9167 14.0833C20 13.0833 20 12.75 20 10C20 7.25 20 6.91667 19.9167 5.91667C19.75 2.25 17.75 0.25 14.0833 0.0833333C13.0833 0 12.75 0 10 0ZM10 4.83333C7.16667 4.83333 4.83333 7.16667 4.83333 10C4.83333 12.8333 7.16667 15.1667 10 15.1667C12.8333 15.1667 15.1667 12.8333 15.1667 10C15.1667 7.16667 12.8333 4.83333 10 4.83333ZM10 13.3333C8.16667 13.3333 6.66667 11.8333 6.66667 10C6.66667 8.16667 8.16667 6.66667 10 6.66667C11.8333 6.66667 13.3333 8.16667 13.3333 10C13.3333 11.8333 11.8333 13.3333 10 13.3333ZM15.3333 3.5C14.6667 3.5 14.1667 4 14.1667 4.66667C14.1667 5.33333 14.6667 5.83333 15.3333 5.83333C16 5.83333 16.5 5.33333 16.5 4.66667C16.5 4 16 3.5 15.3333 3.5Z"
+																			fill="white" />
+																	</svg>
+																</a>
+
+																<a target="_blank"
+																	class="hoverable js-hover-setup inline-block mx-10"
+																	href="" rel="noopener">
+																	<svg width="11" height="20" viewBox="0 0 11 20"
+																		fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path
+																			d="M3.31836 6.66667H0.818359V10H3.31836V20H7.48503V10H10.485L10.8184 6.66667H7.48503V5.25C7.48503 4.5 7.65169 4.16667 8.40169 4.16667H10.8184V0H7.65169C4.65169 0 3.31836 1.33333 3.31836 3.83333V6.66667Z"
+																			fill="white" />
+																	</svg>
+																</a>
+																<a target="_blank"
+																	class="hoverable js-hover-setup inline-block mx-10"
+																	href="" rel="noopener">
+																	<svg width="26" height="19" viewBox="0 0 26 19"
+																		fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd"
+																			d="M20.7029 3.06767C21.2048 3.07855 21.6979 3.20037 22.1459 3.42418C22.3967 3.57373 22.5858 3.80608 22.6798 4.08015C22.9358 4.74253 23.0866 5.43999 23.1272 6.14788C23.2282 7.16036 23.2715 8.38674 23.2715 9.94111C23.2715 11.4955 23.2715 12.7932 23.1272 13.7629C23.084 14.4797 22.9333 15.1861 22.6798 15.8591C22.5898 16.1275 22.4055 16.3551 22.1603 16.5008C21.7134 16.7242 21.2181 16.8368 20.7173 16.8288C17.1243 17.0285 9.04344 17.0285 5.4215 16.8288C4.92005 16.8147 4.42769 16.693 3.9785 16.4723C3.72778 16.3228 3.53867 16.0904 3.44459 15.8163C3.18899 15.1489 3.03814 14.4468 2.99726 13.7343C2.89625 12.7361 2.85296 11.4955 2.85296 9.94111C2.85296 8.38674 2.85296 7.08906 2.99726 6.14788C3.03779 5.43999 3.18868 4.74253 3.44459 4.08015C3.53867 3.80608 3.72778 3.57373 3.9785 3.42418C4.42619 3.19945 4.91947 3.07758 5.4215 3.06767C10.5107 2.76591 15.6137 2.76591 20.7029 3.06767ZM0.818359 9.94111C0.818359 16.2156 1.3234 18.4973 5.32052 18.8395C9.00018 19.0534 17.182 19.0534 20.8617 18.8395C24.8588 18.6399 25.3638 16.2156 25.3638 9.94111C25.3638 3.6666 24.8588 1.38495 20.8617 1.04271C15.6857 0.743252 10.4965 0.743252 5.32052 1.04271C1.3234 1.35643 0.818359 3.68086 0.818359 9.94111ZM11.4966 13.2638C11.3415 13.3324 11.1715 13.3618 11.002 13.3493C10.8326 13.3368 10.6689 13.2829 10.5257 13.1924C10.3826 13.1019 10.2645 12.9776 10.1821 12.8307C10.0996 12.6838 10.0555 12.519 10.0536 12.3511V7.54539C10.0555 7.37746 10.0996 7.21264 10.1821 7.06578C10.2645 6.91891 10.3826 6.79462 10.5257 6.70409C10.6689 6.61356 10.8326 6.55964 11.002 6.54719C11.1715 6.53473 11.3415 6.56413 11.4966 6.63273L16.3739 9.04271C16.5441 9.12681 16.6872 9.25607 16.7872 9.416C16.8872 9.57594 16.9401 9.76023 16.9401 9.94824C16.9401 10.1362 16.8872 10.3205 16.7872 10.4805C16.6872 10.6404 16.5441 10.7697 16.3739 10.8538L11.4966 13.2638Z"
+																			fill="white" />
+																	</svg>
+																</a>
+															</div>
+														</div>
+														<div
+															class='contact-block sm:flex hidden items-center absolute -right-30 bottom-48 transform rotate-90'>
+															<a href="index.html"
+																class="text-white js-hover-setup text-12 transition-all duration-200 hover:text-blue font-extrabold tracking-17 mb-0 mr-12">
+																CONTACT
+															</a>
+															<div class='h-3 w-24 bg-white'></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<script defer src="asstes/js/litespeed.js"></script>
+	<script defer src="asstes/js/mobile-menu-item.js"></script>
+	<script type="text/x-template" id="mobile-menu-item-template"><li
+	:id="'jet-menu-item-'+itemDataObject.itemId"
+	:class="itemClasses"
+>
+	<div
+		class="jet-mobile-menu__item-inner"
+		tabindex="1"
+		:aria-label="itemDataObject.name"
+		v-on:click="itemSubHandler"
+		v-on:keyup.enter="itemSubHandler"
+	>
+		<a
+			:class="itemLinkClasses"
+			:href="itemDataObject.url"
+			:rel="itemDataObject.xfn"
+			:title="itemDataObject.attrTitle"
+			:target="itemDataObject.target"
+		>
+			<div class="jet-menu-item-wrapper">
+				<div
+					class="jet-menu-icon"
+					v-if="isIconVisible"
+					v-html="itemIconHtml"
+				></div>
+				<div class="jet-menu-name">
+					<span
+						class="jet-menu-label"
+						v-html="itemDataObject.name"
+					></span>
+					<small
+						class="jet-menu-desc"
+						v-if="isDescVisible"
+						v-html="itemDataObject.description"
+					></small>
+				</div>
+				<small
+					class="jet-menu-badge"
+					v-if="isBadgeVisible"
+				>
+					<span class="jet-menu-badge__inner">{{ itemDataObject.badgeText }}</span>
+				</small>
+			</div>
+		</a>
+		<span
+			class="jet-dropdown-arrow"
+			v-if="isSub && !templateLoadStatus"
+			v-html="dropdownIconHtml"
+			v-on:click="markerSubHandler"
+		>
+		</span>
+		<div
+			class="jet-mobile-menu__template-loader"
+			v-if="templateLoadStatus"
+		>
+			<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="24px" height="25px" viewBox="0 0 128 128" xml:space="preserve">
+				<g>
+					<linearGradient id="linear-gradient">
+						<stop offset="0%" :stop-color="loaderColor" stop-opacity="0"/>
+						<stop offset="100%" :stop-color="loaderColor" stop-opacity="1"/>
+					</linearGradient>
+				<path d="M63.85 0A63.85 63.85 0 1 1 0 63.85 63.85 63.85 0 0 1 63.85 0zm.65 19.5a44 44 0 1 1-44 44 44 44 0 0 1 44-44z" fill="url(#linear-gradient)" fill-rule="evenodd"/>
+				<animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1080ms" repeatCount="indefinite"></animateTransform>
+				</g>
+			</svg>
+		</div>
+	</div>
+
+	<transition name="menu-container-expand-animation">
+		<mobile-menu-list
+			v-if="isDropdownLayout && subDropdownVisible"
+			:depth="depth+1"
+			:children-object="itemDataObject.children"
+		></mobile-menu-list>
+	</transition>
+
+</li></script>
+	<script type="text/x-template" id="mobile-menu-list-template"><div
+	class="jet-mobile-menu__list"
+	role="navigation"
+>
+	<ul class="jet-mobile-menu__items">
+		<mobile-menu-item
+			v-for="(item, index) in childrenObject"
+			:key="item.id"
+			:item-data-object="item"
+			:depth="depth"
+		></mobile-menu-item>
+	</ul>
+</div></script>
+	<script type="text/x-template" id="mobile-menu-template"><div
+	:class="instanceClass"
+	v-on:keyup.esc="escapeKeyHandler"
+>
+	<div
+		class="jet-mobile-menu__toggle"
+		ref="toggle"
+		tabindex="1"
+		aria-label="Open/Close Menu"
+		v-on:click="menuToggle"
+		v-on:keyup.enter="menuToggle"
+	>
+		<div
+			class="jet-mobile-menu__template-loader"
+			v-if="toggleLoaderVisible"
+		>
+			<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="24px" height="25px" viewBox="0 0 128 128" xml:space="preserve">
+				<g>
+					<linearGradient id="linear-gradient">
+						<stop offset="0%" :stop-color="loaderColor" stop-opacity="0"/>
+						<stop offset="100%" :stop-color="loaderColor" stop-opacity="1"/>
+					</linearGradient>
+				<path d="M63.85 0A63.85 63.85 0 1 1 0 63.85 63.85 63.85 0 0 1 63.85 0zm.65 19.5a44 44 0 1 1-44 44 44 44 0 0 1 44-44z" fill="url(#linear-gradient)" fill-rule="evenodd"/>
+				<animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1080ms" repeatCount="indefinite"></animateTransform>
+				</g>
+			</svg>
+		</div>
+
+		<div
+			class="jet-mobile-menu__toggle-icon"
+			v-if="!menuOpen && !toggleLoaderVisible"
+			v-html="toggleClosedIcon"
+		></div>
+		<div
+			class="jet-mobile-menu__toggle-icon"
+			v-if="menuOpen && !toggleLoaderVisible"
+			v-html="toggleOpenedIcon"
+		></div>
+		<span
+			class="jet-mobile-menu__toggle-text"
+			v-if="toggleText"
+			v-html="toggleText"
+		></span>
+
+	</div>
+
+	<transition name="cover-animation">
+		<div
+			class="jet-mobile-menu-cover"
+			v-if="menuContainerVisible && coverVisible"
+			v-on:click="closeMenu"
+		></div>
+	</transition>
+
+	<transition :name="showAnimation">
+		<div
+			class="jet-mobile-menu__container"
+			v-if="menuContainerVisible"
+		>
+			<div
+				class="jet-mobile-menu__container-inner"
+			>
+				<div
+					class="jet-mobile-menu__header-template"
+					v-if="headerTemplateVisible"
+				>
+					<div
+						class="jet-mobile-menu__header-template-content"
+						ref="header-template-content"
+						v-html="headerContent"
+					></div>
+				</div>
+
+				<div
+					class="jet-mobile-menu__controls"
+				>
+					<div
+						class="jet-mobile-menu__breadcrumbs"
+						v-if="isBreadcrumbs"
+					>
+						<div
+							class="jet-mobile-menu__breadcrumb"
+							v-for="(item, index) in breadcrumbsPathData"
+							:key="index"
+						>
+							<div
+								class="breadcrumb-label"
+								v-on:click="breadcrumbHandle(index+1)"
+								v-html="item"
+							></div>
+							<div
+								class="breadcrumb-divider"
+								v-html="breadcrumbIcon"
+								v-if="(breadcrumbIcon && index !== breadcrumbsPathData.length-1)"
+							></div>
+						</div>
+					</div>
+					<div
+						class="jet-mobile-menu__back"
+						ref="back"
+						tabindex="1"
+						aria-label="Close Menu"
+						v-if="!isBack && isClose"
+						v-html="closeIcon"
+						v-on:click="menuToggle"
+						v-on:keyup.enter="menuToggle"
+					></div>
+					<div
+						class="jet-mobile-menu__back"
+						ref="back"
+						tabindex="1"
+						aria-label="Back to Prev Items"
+						v-if="isBack"
+						v-html="backIcon"
+						v-on:click="goBack"
+						v-on:keyup.enter="goBack"
+					></div>
+				</div>
+
+				<div
+					class="jet-mobile-menu__before-template"
+					v-if="beforeTemplateVisible"
+				>
+					<div
+						class="jet-mobile-menu__before-template-content"
+						ref="before-template-content"
+						v-html="beforeContent"
+					></div>
+				</div>
+
+				<div
+					class="jet-mobile-menu__body"
+				>
+					<transition :name="animation">
+						<mobile-menu-list
+							v-if="!templateVisible"
+							:key="depth"
+							:depth="depth"
+							:children-object="itemsList"
+						></mobile-menu-list>
+						<div
+							class="jet-mobile-menu__template"
+							ref="template-content"
+							v-if="templateVisible"
+						>
+							<div
+								class="jet-mobile-menu__template-content"
+								v-html="itemTemplateContent"
+							></div>
+						</div>
+					</transition>
+				</div>
+
+				<div
+					class="jet-mobile-menu__after-template"
+					v-if="afterTemplateVisible"
+				>
+					<div
+						class="jet-mobile-menu__after-template-content"
+						ref="after-template-content"
+						v-html="afterContent"
+					></div>
+				</div>
+
+			</div>
+		</div>
+	</transition>
+</div></script>
+	<script type='text/javascript' src='asstes/js/js1.js' id='regenerator-runtime-js'></script>
+	<script type='text/javascript' src='asstes/js/js2.js' id='wp-polyfill-js'></script>
+	<script type='text/javascript' src='asstes/js/js4.js' id='splide-js'></script>
+	<script type='text/javascript' src='asstes/js/js5.js' id='gsap-TweenMax-js'></script>
+	<script type='text/javascript' src='asstes/js/easings-js.js' id='easings-js'></script>
+	<script type='text/javascript' src='asstes/js/scrolloverflow-js.js' id='scrolloverflow-js'></script>
+	<script type='text/javascript' src='asstes/js/fullpage-js.js' id='fullpage-js'></script>
+	<script type='text/javascript' src='asstes/js/letweb-js.js' id='letweb-js'></script>
+	<script type='text/javascript' src='asstes/js/nicescroll-js.js' id='nicescroll-js'></script>
+	<script type='text/javascript' src='asstes/js/fancybox-js.js' id='fancybox-js'></script>
+	<script type='text/javascript' src='asstes/js/sticky-js.js' id='sticky-js'></script>
+	<script type='text/javascript' src='asstes/js/odometer-js.js' id='odometer-js'></script>
+	<script type='text/javascript' src='asstes/js/main-js.js' id='theme-js'></script>
+	<script type='text/javascript' src='asstes/js/jet-vue-js.js' id='jet-vue-js'></script>
+	<script type='text/javascript' src='asstes/js/public-scripts-js.js' id='jet-menu-public-scripts-js'></script>
+	<script type='text/javascript' src='asstes/js/lw-bowser-js.js' id='lw-bowser-js'></script>
+	<script type='text/javascript' src='asstes/js/lw-tracking-js.js' id='lw-tracking-js'></script>
+	<script type='text/javascript' src='asstes/js/wp-embed-js.js' id='wp-embed-js'></script>
+	<script type='text/javascript' src='asstes/js/runtime-js.js' id='elementor-webpack-runtime-js'></script>
+	<script type='text/javascript' src='asstes/js/frontend-js.js' id='elementor-frontend-modules-js'></script>
+	<script type='text/javascript' src='asstes/js/waypoints-js.js' id='waypoints-js'></script>
+	<script type='text/javascript' src='asstes/js/jquery-ui-core-js.js' id='jquery-ui-core-js'></script>
+	<script type='text/javascript' src='asstes/js/swiper-js.js' id='swiper-js'></script>
+	<script type='text/javascript' src='asstes/js/share-link-js.js' id='share-link-js'></script>
+	<script type='text/javascript' src='asstes/js/dialog-js.js' id='elementor-dialog-js'></script>
+	<script type='text/javascript' src='asstes/js/frontend-js.js' id='elementor-frontend-js'></script>
+	<script type='text/javascript' src='asstes/js/jet-menu.js' id='jet-menu-elementor-widgets-scripts-js'></script>
+	<script type='text/javascript' src='asstes/js/preloaded-modules-js.js' id='preloaded-modules-js'></script>
+</body>
+
+</html>
