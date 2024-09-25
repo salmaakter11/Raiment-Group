@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en-US">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="UTF-8">
+    <title>Raiment Group</title>
+    <link rel="stylesheet" href="asstes/css/style.css">
+    <link rel="stylesheet" href="asstes/css/tailwind.css">
+    <link rel="stylesheet" href="asstes/css/fontawesome.css">
+    <link rel="stylesheet" href="asstes/css/fullPage.css">
+    <link rel="stylesheet" href="asstes/css/elementor-icons.css">
+    <script type='text/javascript' src='asstes/js/jquery.minaf6c.js'></script>
+    <script type='text/javascript' src='asstes/js/jQuery-Migrat- v3.3.2.js'></script>
+    <link rel="icon" href="asstes/img/logo.png" sizes="192x192" />
+</head>
+
+<body class="font-body jet-desktop-menu-active" x-data="{ atTop: true, openMenu: false }"
+    :class="{ 'overflow-hidden': openMenu }" x-on:scroll.window="atTop = (window.pageYOffset > 200) ? false : true; ">
+    <div class="c-cursor js-cursor"></div>
+    <div class="site-header">
+        <div>
+            <div class='fixed header-inner flex py-20 px-15 lg:px-45 left-0 top-0 items-center w-full justify-between z-50'
+                :class="{'fixed': atTop }">
+                <div class='logo max-w-127'>
+                    <a class="hoverable js-hover-setup" href="index.html">
+                        <img class='w-full h-auto object-contain' src="asstes/img/logo.png" />
+                    </a>
+                </div>
+                <div class='flex text-10 font-bold tracking-13 uppercase text-black items-center'>
+                    <div @click='openMenu=true;if(typeof fullpage_api !== "undefined"){fullpage_api.setAllowScrolling(false)}'
+                        class='menu-icon cursor-pointer hoverable js-hover-setup'>
+                        <svg width="32" height="14" viewBox="0 0 32 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="4" rx="2" fill="black" />
+                            <rect x="9" y="10" width="23" height="4" rx="2" fill="black" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div :class="{'visible opacity-100 scale-100': openMenu, 'opacity-0 invisible scale-95': !openMenu}"
+                class='invisible opacity-0 menu bg-black transform transition-all duration-200 fixed left-0 top-0 w-full h-full z-50'>
+                <div class='sm:grid overflow-auto sm:grid-cols-11 flex flex-col h-full'>
+                    <div class='sm:col-span-3 sm:order-1 order-2 sm:py-37 py-20 sm:px-45 px-10 site-header'>
+                        <div class='flex h-full sm:pt-0 pt-32 sm:px-0 px-15 sm:pb-0 pb-15 flex-col justify-between'>
+                            <div class='logo sm:block hidden max-w-127'>
+                                <a class="hoverable js-hover-setup" href="index.html"><img
+                                        class='w-full h-auto object-contain' src="asstes/img/logo.png" /></a>
+                            </div>
+                            <div>
+                                <div class='social mb-20'>
+                                    <a target="_blank" class='hoverable js-hover-setup inline-block mr-10 mx-10'
+                                        href="">
+                                        <img src="asstes/img/instagram-logo.png" alt="" width="20">
+                                    </a>
+                                    <a target="_blank" class='hoverable js-hover-setup inline-block mx-10' href="">
+                                        <img src="asstes/img/facebook-logo.png" alt="" width="20">
+                                    </a>
+                                    <a target="_blank" class='hoverable js-hover-setup inline-block mx-10' href="">
+                                        <img src="asstes/img/youtube-logo.png" alt="" width="20">
+                                    </a>
+                                </div>
+                                <h6
+                                    class='text-12 font-bold tracking-13 uppercase text-white mb-17 hover:text-blue-5 transition-all duration-200'>
+                                    <a class="hoverable js-hover-setup" href="contact.html">Contact us</a>
+                                </h6>
+                                <p class='font-medium text-10 text-white'>&copy; 2024, Raiment group. All Rights
+                                    Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='logo absolute left-20 top-24 sm:hidden max-w-127'>
+                        <a class="hoverable js-hover-setup" href="index.html">
+                            <img class='w-full h-auto object-contain' src="asstes/img/logo.png"/>
+                        </a>
+                    </div>
+                    <div
+                        class='vt-main-menu sm:col-span-8 sm:flex-none flex-auto sm:order-2 order-1 flex items-center sm:justify-start justify-center lg:pl-188 sm:py-37 pt-107 pb-20 sm:px-45 px-10 bg-white'>
+                        <ul id="menu-main-menu" class="sm:pl-80 md:pl-0 pl-10">
+                            <li id="menu-item-2198"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+                                <a href="home.html" class="inline-block py-20 hoverable js-hover-setup">Home</a>
+                            </li>
+                            <li id="menu-item-2197"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2197 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+                                <a href="about-us.html" class="inline-block py-20 hoverable js-hover-setup">About Us</a>
+                            </li>
+                            <li id="menu-item-2196"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2196 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+                                <a href="our-product.html" class="inline-block py-20 hoverable js-hover-setup">Our
+                                    Products</a>
+                            </li>
+                            <li id="menu-item-2200"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2200 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+                                <a href="prd.html" class="inline-block py-20 hoverable js-hover-setup">PRD</a>
+                            </li>
+                            <li id="menu-item-2199"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2199 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+                                <a href="contact.html" class="inline-block py-20 hoverable js-hover-setup">Contact
+                                    Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div @click='openMenu=false;if(typeof fullpage_api !== "undefined"){fullpage_api.setAllowScrolling(true)}'
+                    class='hoverable js-hover-setup z-1 close-menu absolute sm:right-37 right-15 top-15 sm:top-28 p-10 cursor-pointer'>
+                    <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3.45605" width="32" height="4" rx="2" transform="rotate(45 3.45605 0)" fill="black" />
+                        <rect x="25.4561" y="3" width="32" height="4" rx="2" transform="rotate(135 25.4561 3)"
+                            fill="black" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="elementor-inner">
+            <div class="elementor-section-wrap">
+                <section class="px-4 md:px-0 pt-80">
+                    <header>
+                        <h1 class="text-white text-2xl text-24 font-bold md:text-4xl font-bold">Home</h1>
+                    </header>
+                </section>
+
+                
+                <section>
+                    <div class="container mx-auto px-4 py-8">
+                        <div class="content-tab-item grid lg:grid-cols-2 items-center lg:gap-80 md:gap-40 gap-30" x-show="activeTab == 1">
+                            <div>
+                                <div class="image bg-cover bg-no-repeat bg-center pt-68.9p" style="background-image: url(asstes/img/CEO-Photo.jpg)">
+                                </div>
+                            </div>
+                            <div class="text-14 text-white font-medium">
+                                <h3 class="mb-8 md:text-24 sm:text-20 text-18 tracking-13 uppercasetext-white">
+                                    Lets Talk About RAIMENT GROUP</h3>
+                                <div class="block-content">
+                                    <p>WWW.RAIMENTGROUP.COM is one of Reputed apparels company web portal. Established in Narayanganj, Bangladesh since 2004 with own readymade garments factory Rainybay Apparels Ltd. after long time business experience & work with international reputed company we start Buying House business in Dhaka, Bangladesh since 2014 to till now doing business by our company Raiment Apparels Ltd. Customer & Supplier handling with customer continue order follow up is our regular work. Honesty & experience is our main working power. </p>
+                                    <p>Raiment to excellence in merchandising, product development, production and logistics. We have earned a reputation throughout the global apparel industry as one of the foremost factories in Bangladesh for our commitment to quality, timely delivery and total value. Through our extensive sourcing network, we have the ability to effectively procure the best materials. Our customers rely on us to deliver the best quality products and superb service which enables them to successfully compete in the emerging market place.</p>
+                        
+                                </div>
+                            </div>
+                        </div> 
+                      </div>
+                </section>
+                <section>
+                    <div class="container mx-auto px-4 py-8">
+                        <div class="content-tab-item grid lg:grid-cols-2 items-center lg:gap-80 md:gap-40 gap-30" x-show="activeTab == 1">
+                            <div class="text-14 text-white font-medium">
+                                <h3 class="mb-8 md:text-24 sm:text-20 text-18 tracking-13 uppercase text-white">
+                                    MISSION :</h3>
+                                <div class="block-content">
+                                    <p>Make our company as a Complete Apparels solution & one stop service house in the world.</p>
+                        
+                                </div>
+                                <h3 class="mb-8 md:text-24 sm:text-20 text-18 tracking-13 uppercase text-white">
+                                    VALUES :</h3>
+                                <div class="block-content">
+                                   <ul>
+                                    <li>Customer Satisfaction</li>
+                                    <li>Integrity</li>
+                                    <li>Inspiring creativity</li>
+                                    <li>Corporate Social responsibility</li>
+                                    <li>Healthy Work Environment</li>
+                                    <li>Commitment & Teamwork</li>
+                                    <li>Equal Opportunity Employer</li>
+                                    <li>Greener Environment  
+                                        
+                                    </li>
+                                   </ul>
+                        
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image bg-cover bg-no-repeat bg-center pt-68.9p" style="background-image: url(asstes/img/mission.png)">
+                                </div>
+                            </div>
+                        </div> 
+                      </div>
+                </section>
+
+                <section class="container mx-auto p-8 md:p-16">
+                    <h2 class="text-2xl md:text-3xl font-bold text-center text-24 mb-8 pb-15 text-white">Our Group Members</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+                        <article class="rounded-lg overflow-hidden">
+                            <img src="asstes/img/RAIMENT-LOGO-1.png" alt="Client Logo 1"  class=" Client h-auto effect-marley bg-white">
+                        </article>
+                        <article class="rounded-lg overflow-hidden">
+                            <img src="asstes/img/RainyBay-LOGO.png" alt="Client Logo 2" class=" Client h-auto effect-marley bg-white" >
+                        </article>
+                        <article class="rounded-lg overflow-hidden">
+                            <img src="asstes/img/Fountain-LOGO.png" alt="Client Logo 3" class=" Client h-auto effect-marley bg-white">
+                        </article>
+                    </div>
+                </section>
+                
+                
+            </div>
+        </div>
+    </div>
+    <div class="site-footer mt-36">
+        <div class='lg:pt-84 relative md:pt-56 sm:pt-40 pt-32 lg:pb-32 md:pb-28 pb-37 md:px-45 px-15'>
+            <div class="relative">
+
+                <div class='md:flex justify-between'>
+                    <div class='md:mb-0 mb-20 sm:block hidden footer-menu-wrapper'></div>
+                    <div class='flex sm:text-left sm:justify-start justify-center text-center sm:pr-40 items-center'>
+                        <h6 class='md:mr-36 mb-0 text-10 font-medium text-white tracking-normal'>
+                            &copy; 2022, Raiment group . All Rights Reserved.</h6>
+                         <div class='social sm:flex hidden mr-36'>
+                            <a target="_blank" class='hoverable js-hover-setup inline-block mr-10 mx-10' href="">
+                                <img src="asstes/img/instagram-logo.png" alt="" width="20">
+                            </a>
+                            <a target="_blank" class='hoverable js-hover-setup inline-block mx-10' href="">
+                                <img src="asstes/img/facebook-logo.png" alt="" width="20">
+                            </a>
+                            <a target="_blank" class='hoverable js-hover-setup inline-block mx-10' href="">
+                                <img src="asstes/img/youtube-logo.png" alt="" width="20">
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class='contact-block sm:flex hidden items-center absolute -right-30 bottom-48 transform rotate-90'>
+                        <a href="contact.html"
+                            class='js-hover-setup text-white hover:text-blue-5 transition-all duration-200 text-12 font-extrabold tracking-17 mb-0 mr-12'>
+                            CONTACT
+                        </a>
+                        <div class='h-3 w-24 text-white'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="asstes/js/litespeed.js"></script>
+    <script defer src="asstes/js/mobile-menu-item.js"></script>
+    <script type='text/javascript' src='asstes/js/js1.js'></script>
+    <script type='text/javascript' src='asstes/js/js2.js'></script>
+    <script type='text/javascript' src='asstes/js/js4.js'></script>
+    <script type='text/javascript' src='asstes/js/easings-js.js'></script>
+    <script type='text/javascript' src='asstes/js/scrolloverflow-js.js'></script>
+    <script type='text/javascript' src='asstes/js/fullpage-js.js'></script>
+    <script type='text/javascript' src='asstes/js/nicescroll-js.js'></script>
+    <script type='text/javascript' src='asstes/js/fancybox-js.js'></script>
+    <script type='text/javascript' src='asstes/js/sticky-js.js'></script>
+    <script type='text/javascript' src='asstes/js/odometer-js.js'></script>
+    <script type='text/javascript' src='asstes/js/main-js.js'></script>
+    <script type='text/javascript' src='asstes/js/jet-vue-js.js'></script>
+    <script type='text/javascript' src='asstes/js/public-scripts-js.js'></script>
+    <script type='text/javascript' src='asstes/js/lw-bowser-js.js'></script>
+    <script type='text/javascript' src='asstes/js/lw-tracking-js.js'></script>
+    <script type='text/javascript' src='asstes/js/wp-embed-js.js'></script>
+    <script type='text/javascript' src='asstes/js/runtime-js.js'></script>
+    <script type='text/javascript' src='asstes/js/waypoints-js.js'></script>
+    <script type='text/javascript' src='asstes/js/jquery-ui-core-js.js'></script>
+    <script type='text/javascript' src='asstes/js/swiper-js.js'></script>
+    <script type='text/javascript' src='asstes/js/share-link-js.js'></script>
+    <script type='text/javascript' src='asstes/js/dialog-js.js'></script>
+    <script type='text/javascript' src='asstes/js/frontend-js.js'></script>
+    <script type='text/javascript' src='asstes/js/preloaded-modules-js.js'></script>
+    <script type='text/javascript' src='asstes/js/frontend-js.js'></script>
+    <script data-optimized="1" type='text/javascript' src='asstes/js/elementor-frontend-modules-js.js'></script>
+
+</body>
+
+</html>

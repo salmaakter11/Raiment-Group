@@ -2940,11 +2940,6 @@ svg path {
   height: 100%;
   transform: rotate(270deg);
 }
-
- {
-  transition-duration: 850ms !important;
-}
-
 .fullpage_panel_left {
   position: fixed;
   top: 50%;

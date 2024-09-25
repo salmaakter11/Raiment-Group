@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en-US">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="UTF-8">
+    <title>Raiment Group</title>
+    <link rel="stylesheet" href="asstes/css/style.css">
+    <link rel="stylesheet" href="asstes/css/tailwind.css">
+    <link rel="stylesheet" href="asstes/css/fontawesome.css">
+    <link rel="stylesheet" href="asstes/css/fullPage.css">
+    <link rel="stylesheet" href="asstes/css/elementor-icons.css">
+    <script type='text/javascript' src='asstes/js/jquery.minaf6c.js'></script>
+    <script type='text/javascript' src='asstes/js/jQuery-Migrat- v3.3.2.js'></script>
+    <link rel="icon" href="asstes/img/logo.png" sizes="192x192" />
+</head>
+
+<body class="font-body jet-desktop-menu-active" x-data="{ atTop: true, openMenu: false }"
+    :class="{ 'overflow-hidden': openMenu }" x-on:scroll.window="atTop = (window.pageYOffset > 200) ? false : true; ">
+    <div class="c-cursor js-cursor"></div>
+    <div class="site-header">
+        <div>
+            <div class='fixed header-inner flex py-20 px-15 lg:px-45 left-0 top-0 items-center w-full justify-between z-50'
+                :class="{'fixed': atTop }">
+                <div class='logo max-w-127'>
+                    <a class="hoverable js-hover-setup" href="index.html">
+                        <img class='w-full h-auto object-contain' src="asstes/img/logo.png" />
+                    </a>
+                </div>
+                <div class='flex text-10 font-bold tracking-13 uppercase text-black items-center'>
+                    <div @click='openMenu=true;if(typeof fullpage_api !== "undefined"){fullpage_api.setAllowScrolling(false)}'
+                        class='menu-icon cursor-pointer hoverable js-hover-setup'>
+                        <svg width="32" height="14" viewBox="0 0 32 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="4" rx="2" fill="black" />
+                            <rect x="9" y="10" width="23" height="4" rx="2" fill="black" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div :class="{'visible opacity-100 scale-100': openMenu, 'opacity-0 invisible scale-95': !openMenu}"
+                class='invisible opacity-0 menu bg-black transform transition-all duration-200 fixed left-0 top-0 w-full h-full z-50'>
+                <div class='sm:grid overflow-auto sm:grid-cols-11 flex flex-col h-full'>
+                    <div class='sm:col-span-3 sm:order-1 order-2 sm:py-37 py-20 sm:px-45 px-10 site-header'>
+                        <div class='flex h-full sm:pt-0 pt-32 sm:px-0 px-15 sm:pb-0 pb-15 flex-col justify-between'>
+                            <div class='logo sm:block hidden max-w-127'>
+                                <a class="hoverable js-hover-setup" href="index.html"><img
+                                        class='w-full h-auto object-contain' src="asstes/img/logo.png" /></a>
+                            </div>
+                            <div>
+                                <div class='social mb-20'>
+                                    <a target="_blank" class='hoverable js-hover-setup inline-block mr-10 mx-10'
+                                        href="">
+                                        <img src="asstes/img/instagram-logo.png" alt="" width="20">
+                                    </a>
+                                    <a target="_blank" class='hoverable js-hover-setup inline-block mx-10' href="">
+                                        <img src="asstes/img/facebook-logo.png" alt="" width="20">
+                                    </a>
+                                    <a target="_blank" class='hoverable js-hover-setup inline-block mx-10' href="">
+                                        <img src="asstes/img/youtube-logo.png" alt="" width="20">
+                                    </a>
+                                </div>
+                                <h6
+                                    class='text-12 font-bold tracking-13 uppercase text-white mb-17 hover:text-blue-5 transition-all duration-200'>
+                                    <a class="hoverable js-hover-setup" href="contact.html">Contact us</a>
+                                </h6>
+                                <p class='font-medium text-10 text-white'>&copy; 2024, Raiment group. All Rights
+                                    Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='logo absolute left-20 top-24 sm:hidden max-w-127'>
+                        <a class="hoverable js-hover-setup" href="index.html">
+                            <img class='w-full h-auto object-contain' src="asstes/img/logo.png"/>
+                        </a>
+                    </div>
+                    <div
+                        class='vt-main-menu sm:col-span-8 sm:flex-none flex-auto sm:order-2 order-1 flex items-center sm:justify-start justify-center lg:pl-188 sm:py-37 pt-107 pb-20 sm:px-45 px-10 bg-white'>
+                        <ul id="menu-main-menu" class="sm:pl-80 md:pl-0 pl-10">
+                            <li id="menu-item-2198"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+                                <a href="home.html" class="inline-block py-20 hoverable js-hover-setup">Home</a>
+                            </li>
+                            <li id="menu-item-2197"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2197 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+                                <a href="about-us.html" class="inline-block py-20 hoverable js-hover-setup">About Us</a>
+                            </li>
+                            <li id="menu-item-2196"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2196 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+                                <a href="our-product.html" class="inline-block py-20 hoverable js-hover-setup">Our
+                                    Products</a>
+                            </li>
+                            <li id="menu-item-2200"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2200 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+                                <a href="prd.html" class="inline-block py-20 hoverable js-hover-setup">PRD</a>
+                            </li>
+                            <li id="menu-item-2199"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2199 transition-all mb-8 duration-200 font-bold sm:text-20 text-18 tracking-13 uppercase text-black">
+                                <a href="contact.html" class="inline-block py-20 hoverable js-hover-setup">Contact
+                                    Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div @click='openMenu=false;if(typeof fullpage_api !== "undefined"){fullpage_api.setAllowScrolling(true)}'
+                    class='hoverable js-hover-setup z-1 close-menu absolute sm:right-37 right-15 top-15 sm:top-28 p-10 cursor-pointer'>
+                    <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3.45605" width="32" height="4" rx="2" transform="rotate(45 3.45605 0)" fill="black" />
+                        <rect x="25.4561" y="3" width="32" height="4" rx="2" transform="rotate(135 25.4561 3)"
+                            fill="black" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="elementor-inner">
+            <div class="elementor-section-wrap">
+                <section class="px-4 md:px-0 pt-80">
+                    <header>
+                        <h1 class="text-white text-2xl text-24 font-bold md:text-4xl font-bold ">RainyBay Apparels Ltd.</h1>
+                    </header>
+                </section>
+
+                <section>
+                    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/2">
+                            <div class=" rounded-lg shadow-md p-6 pb-15">
+                                <p class="text-white text-20">Our 10 years of experience and expertise in the Apparel Industry decided to join hands to give a new meaning to Ready Made Garments Industry in Bangladesh. With Our hands on approach, a personal commitment to responsibility, meeting customer needs pro-actively and delivering world-class quality on time, their vision of becoming a most ethical sort after agency became a reality. They grow from strength to strength, picking and training their growing team with the same values.</p>
+                                <p class="text-white text-20">We help international buyer’s source garments from all regions of Bangladesh. With a firm grounding in the dynamics of textile and garment Industry, we identify our client needs, in turn, the end consumer needs, and recognize the opportunities.</p>
+                                <p class="text-white text-20">Today Our Corporate management comprises of 43 people, 9 clients, 2 offices, a complete team of Merchandiser & designers . 21 Person Factory & Office Qc</p>
+                                <!-- Add more text or content here -->
+                            </div>
+                        </div>
+                        <!-- Table Section -->
+                        <div class="w-full md:w-1/2 mb-4 md:mb-0">
+                            <div class=" rounded-lg shadow-md p-6">
+                                <h2 class="text-xl font-semibold mb-4 text-20 text-center pb-37 text-white">Profile :</h2>
+                                <table class="w-full text-white">
+                                    <tbody>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Company Name :</td>
+                                            <td class="px-4 py-2 border">RAINY BAY APPARELS LTD</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Company Category :</td>
+                                            <td class="px-4 py-2 border">Limited Company</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Company Type :</td>
+                                            <td class="px-4 py-2 border">Ready Made Garments Manufacturer & 100% Exporter</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Export Type :</td>
+                                            <td class="px-4 py-2 border">Ready Made Garments Item.</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="px-4 py-2 border">Main Exports Market :</td>
+                                            <td class="px-4 py-2 border">USA, Australia, New Zealand, Mexico, Brazil, Germany, Spain, Italy, Japan Etc.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Factory Address :</td>
+                                            <td class="px-4 py-2 border">MUSLIM NAGAR, ANAYET NAGAR, FATULLAH, NARAYANGONJ, BANGLADESH.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Banks Name :</td>
+                                            <td class="px-4 py-2 border">AL ARAFAH ISLAMI BANK LTD
+                                                BANANI BRANCH 56, KAMAL ATATURK AVENUE, BANANI, DHAKA, BANGLADESH.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Swift :</td>
+                                            <td class="px-4 py-2 border">ALARBDDH079</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                
+                    
+            
+                    </div>
+                </section>
+                <section>
+                    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row">
+                        <!-- Table Section -->
+                        <div class="w-full md:w-1/2 mb-4 md:mb-0">
+                            <div class=" rounded-lg shadow-md p-6">
+                                <h2 class="text-xl font-semibold mb-4 text-20 text-center pb-37 text-white">Our Products :</h2>
+                                <p class="text-white text-18">Knit Fabric: 1X1 RIB, 2X1 RIB, 2X2 RIB, LYCRA RIB, FLATBACK RIB, PLATED RIB, FRENCH RIB, WAFFEL RIB, MASH RIB, PLAIN INTERLOCK, SINGLE JERSEY, PIQUE, LACOUST, FULL FEEDER LYCRA, TERRY FLEECE and various categories of drop needle & Design.</p>
+                                <p class="text-white text-20">Knit Garments: T-Shirts, Polo Shirt, Jacket, Rugby Shirts, Tank Tops, Henley Shirt, Sweat Shirts, Trouser Sets, Tops and Pants, Ram per, Semi Formal Shirts, Baby Dresses, Baby Suits, Skirts, etc.</p>
+                                <h2 class="text-xl font-semibold mb-4 text-20  pb-37 text-white">PRODUCTION CAPACITY: </h2>
+                                <h2 class="text-xl font-semibold mb-4 text-20  pb-37 text-white">Garments Item </h2>
+                                <table class="w-full text-white">
+                                    <tbody>
+                                        <tr>
+                                            <td class="px-4 py-2 border">BASIC SHIRTS & TROUSER :</td>
+                                            <td class="px-4 py-2 border">6,000 Pcs Per Day</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">POLO SHIRT :</td>
+                                            <td class="px-4 py-2 border">3,000 Pcs Per Day</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">JACKET :</td>
+                                            <td class="px-4 py-2 border">1,500 Pcs Per Day</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">TANK TOP :</td>
+                                            <td class="px-4 py-2 border">8,000 Pcs Per Day</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="px-4 py-2 border">Total sewing line :</td>
+                                            <td class="px-4 py-2 border">04 Line.</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                
+                    
+            
+                    </div>
+                </section>
+                <section>
+                    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row">
+                        <!-- Table Section -->
+                        <div class="w-full md:w-1/2 mb-4 md:mb-0">
+                            <div class=" rounded-lg shadow-md p-6">
+                                <h2 class="text-xl font-semibold mb-4 text-20 text-center pb-37 text-white">List of Machine  :</h2>
+                                <table class="w-full text-white">
+                                    <tbody>
+                                        <tr>
+                                            <td class="px-4 py-2 border"> Flat Bed Lock</td>
+                                            <td class="px-4 py-2 border">25 Sets</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Cylinder Bed/Lock</td>
+                                            <td class="px-4 py-2 border">10 Sets</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Over Lock (3 Thread)</td>
+                                            <td class="px-4 py-2 border">10 Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Over Lock (3 Thread)</td>
+                                            <td class="px-4 py-2 border">10 Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Over Lock (4 Thread)</td>
+                                            <td class="px-4 py-2 border">05 Sets</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Plain Machine</td>
+                                            <td class="px-4 py-2 border">30 Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Kansai Special</td>
+                                            <td class="px-4 py-2 border">01 Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Back Tape Machine</td>
+                                            <td class="px-4 py-2 border">01 Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Button Hole Machine</td>
+                                            <td class="px-4 py-2 border">01 Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Button Attaching Machine</td>
+                                            <td class="px-4 py-2 border">01 Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Tape Cutting Machine</td>
+                                            <td class="px-4 py-2 border">01 Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Snap Button</td>
+                                            <td class="px-4 py-2 border">02 Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Fid of the Arm</td>
+                                            <td class="px-4 py-2 border">01 Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Piquet Machine</td>
+                                            <td class="px-4 py-2 border">01 Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Cutting Machine</td>
+                                            <td class="px-4 py-2 border">02 Sets</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Bar Taking Machine</td>
+                                            <td class="px-4 py-2 border">01 Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Steam Iron</td>
+                                            <td class="px-4 py-2 border">08 Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">Gas boiler</td>
+                                            <td class="px-4 py-2 border">01 Set</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="px-4 py-2 border">Generator Brand: Cattar Pilar-150 KV</td>
+                                            <td class="px-4 py-2 border">01 Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2 border">TOTAL :</td>
+                                            <td class="px-4 py-2 border">117 Sets</td>
+                                        </tr>
+                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                
+                    
+            
+                    </div>
+                </section>
+                <section>
+                    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row">
+                        <!-- Table Section -->
+                        <div class="w-full md:w-1/2 mb-4 md:mb-0">
+                            <div class="rounded-lg shadow-md p-6">
+                                <h2 class="text-xl font-semibold mb-4 text-20 text-center pb-37 text-white">Quality Team :</h2>
+                                <p class="text-white text-18">At  RAINYBAY APPARELS LTD, All processes and procedures are permanently monitored to guarantee quality of garments. The quality control starts from the purchase of yarn. Before bulk production starts, the yarn is first tested in laboratory and then on sample fabrics production.</p>
+                                <p class="text-white text-20">We try to monitor all knitting with our expert knitting quality, so that we can control the loop length, defaults and avoid yarn lot mixing. All Geiger rolls are being inspected before storing them in our warehouse.</p>
+                                <p class="text-white text-20">WDuring the dyeing process, all dyed batches of fabrics are tested for color variation, GSM, Color fastness, Light fastness, Perspiration and Rubbing fastness in our own lab.</p>
+                                <p class="text-white text-20">During the garments production, quality is being checked from the cutting of fabrics to the packing of garments. Quality inspectors are checking the cutting patterns and the bundles of cut pieces. All sewing production is constantly being monitored in line, and we have a 100% checking system at end of each line. In the packing department we have inspector to the random checking of quality.</p>
+                                <p class="text-white text-20" >Furthermore to the regular quality control execution in every section, we have a separate audit team, who is checking permanently whether all the procedures are being followed accurately or not.</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row">
+                        <!-- Table Section -->
+                        <div class="w-full md:w-1/2 mb-4 md:mb-0">
+                            <div class=" rounded-lg shadow-md p-6">
+                                <h2 class="text-xl font-semibold mb-4 text-20 text-center pb-37 text-white">Code of conduct :</h2>
+                                <p class="text-white text-18 ">For the safety and social commitment to the worker, we employed 2 persons to ensure that the working conditions at our premises are according to human right, local laws, ILO conventions and our personal social engagements.  RAINYBAY APPARELS LTD, believes that the best person for the job should get the job and that a person gets paid based on his performance, without any kind of discrimination. No persons under the age of 16 are employed at the premises and our in-house doctor is examining all workers regularly. Every floor has one exits and all exits are kept open during the working hours. Adequate fire fighting equipments are placed through the entire floor and a fire fighting team is trained for a permanent basis to face the emergency. On every floor first aid is available. Enough drinking water facility is available for all workers in each floor and the water is being tested on a regular basis. All workers have the right to form their own welfare organization. And they have the right to meet the top managements for their right.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="site-footer mt-36">
+        <div class='lg:pt-84 relative md:pt-56 sm:pt-40 pt-32 lg:pb-32 md:pb-28 pb-37 md:px-45 px-15'>
+            <div class="relative">
+
+                <div class='md:flex justify-between'>
+                    <div class='md:mb-0 mb-20 sm:block hidden footer-menu-wrapper'></div>
+                    <div class='flex sm:text-left sm:justify-start justify-center text-center sm:pr-40 items-center'>
+                        <h6 class='md:mr-36 mb-0 text-10 font-medium text-white tracking-normal'>
+                            &copy; 2022, Raiment group . All Rights Reserved.</h6>
+                         <div class='social sm:flex hidden mr-36'>
+                            <a target="_blank" class='hoverable js-hover-setup inline-block mr-10 mx-10' href="">
+                                <img src="asstes/img/instagram-logo.png" alt="" width="20">
+                            </a>
+                            <a target="_blank" class='hoverable js-hover-setup inline-block mx-10' href="">
+                                <img src="asstes/img/facebook-logo.png" alt="" width="20">
+                            </a>
+                            <a target="_blank" class='hoverable js-hover-setup inline-block mx-10' href="">
+                                <img src="asstes/img/youtube-logo.png" alt="" width="20">
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class='contact-block sm:flex hidden items-center absolute -right-30 bottom-48 transform rotate-90'>
+                        <a href="contact.html"
+                            class='js-hover-setup text-white hover:text-blue-5 transition-all duration-200 text-12 font-extrabold tracking-17 mb-0 mr-12'>
+                            CONTACT
+                        </a>
+                        <div class='h-3 w-24 bg-white'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="asstes/js/litespeed.js"></script>
+    <script defer src="asstes/js/mobile-menu-item.js"></script>
+    <script type='text/javascript' src='asstes/js/js1.js'></script>
+    <script type='text/javascript' src='asstes/js/js2.js'></script>
+    <script type='text/javascript' src='asstes/js/js4.js'></script>
+    <script type='text/javascript' src='asstes/js/easings-js.js'></script>
+    <script type='text/javascript' src='asstes/js/scrolloverflow-js.js'></script>
+    <script type='text/javascript' src='asstes/js/fullpage-js.js'></script>
+    <script type='text/javascript' src='asstes/js/nicescroll-js.js'></script>
+    <script type='text/javascript' src='asstes/js/fancybox-js.js'></script>
+    <script type='text/javascript' src='asstes/js/sticky-js.js'></script>
+    <script type='text/javascript' src='asstes/js/odometer-js.js'></script>
+    <script type='text/javascript' src='asstes/js/main-js.js'></script>
+    <script type='text/javascript' src='asstes/js/jet-vue-js.js'></script>
+    <script type='text/javascript' src='asstes/js/public-scripts-js.js'></script>
+    <script type='text/javascript' src='asstes/js/lw-bowser-js.js'></script>
+    <script type='text/javascript' src='asstes/js/lw-tracking-js.js'></script>
+    <script type='text/javascript' src='asstes/js/wp-embed-js.js'></script>
+    <script type='text/javascript' src='asstes/js/runtime-js.js'></script>
+    <script type='text/javascript' src='asstes/js/waypoints-js.js'></script>
+    <script type='text/javascript' src='asstes/js/jquery-ui-core-js.js'></script>
+    <script type='text/javascript' src='asstes/js/swiper-js.js'></script>
+    <script type='text/javascript' src='asstes/js/share-link-js.js'></script>
+    <script type='text/javascript' src='asstes/js/dialog-js.js'></script>
+    <script type='text/javascript' src='asstes/js/frontend-js.js'></script>
+    <script type='text/javascript' src='asstes/js/preloaded-modules-js.js'></script>
+    <script type='text/javascript' src='asstes/js/frontend-js.js'></script>
+    <script data-optimized="1" type='text/javascript' src='asstes/js/elementor-frontend-modules-js.js'></script>
+
+</body>
+
+</html>
